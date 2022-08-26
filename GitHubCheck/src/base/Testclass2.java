@@ -1,7 +1,7 @@
 /**
  * 
  */
-package sample;
+package base;
 
 /**
  * @author ragesh
