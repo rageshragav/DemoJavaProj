@@ -7,7 +7,7 @@ package sample;
  * @author ragesh
  *
  */
-public class Testclass {
+public class Testclass2 {
 
 	/**
 	 * @param args
