@@ -38,4 +38,10 @@ public class LoginPage
    {
 	  login.click();
    }
+   
+   public void loginToDemoBank(String userName,String passWord) {
+	   sendUserName(userName);
+	   sendPassward(passWord);
+	   login.click();
+   }
 }
