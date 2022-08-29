@@ -54,7 +54,6 @@ Testclass(){
     public void loginToApplication() throws EncryptedDocumentException, IOException
     {
 	    System.out.println("login To Application");
-	    driver.get("http://localhost/login.do");
 	    
 	    String userName = Utility.getDataFromExcel("demoBank",1,0);
 	    loginpg.sendUserName(userName);
@@ -70,7 +69,7 @@ Testclass(){
 	  testID = 101;
 	  SoftAssert softAssert = new SoftAssert();
 	  System.out.println("to Verify NewCustomer Tab/Button");
-	  homePage.openNewCustomerpage();
+	  homePage.opennewCustomerPage();
 	  String url = driver.getCurrentUrl();
 	  String title = driver.getTitle();
 	  softAssert.assertEquals(url, "");
@@ -85,7 +84,7 @@ Testclass(){
 		   Utility.getScreenshot(driver, testID);
 	   }
 	    System.out.println("logout From Application");
-	    homePage.clickOnlogout();
+	    homePage.clickOnlogOutTab();
    }
    @AfterClass
    public void clearPOMObject()
