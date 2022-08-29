@@ -2,16 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-26T16:14:26 IST" name="Default suite" finished-at="2022-08-26T16:14:32 IST" duration-ms="5861">
+  <suite started-at="2022-08-29T11:19:44 IST" name="Default suite" finished-at="2022-08-29T11:20:19 IST" duration-ms="34807">
     <groups>
     </groups>
-    <test started-at="2022-08-26T16:14:26 IST" name="Default test" finished-at="2022-08-26T16:14:32 IST" duration-ms="5861">
-      <class name="base.BaseClass">
-        <test-method signature="launchBrowser()[pri:0, instance:base.BaseClass@dd8ba08]" started-at="2022-08-26T16:14:26 IST" name="launchBrowser" finished-at="2022-08-26T16:14:32 IST" duration-ms="5803" status="PASS">
+    <test started-at="2022-08-29T11:19:44 IST" name="Default test" finished-at="2022-08-29T11:20:19 IST" duration-ms="34807">
+      <class name="testcases.Testclass">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.Testclass@4f83df68]" started-at="2022-08-29T11:19:44 IST" name="launchBrowser" finished-at="2022-08-29T11:20:16 IST" duration-ms="31657" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-      </class> <!-- base.BaseClass -->
+        <test-method signature="login()[pri:0, instance:testcases.Testclass@4f83df68]" started-at="2022-08-29T11:20:16 IST" name="login" finished-at="2022-08-29T11:20:19 IST" duration-ms="3092" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+      </class> <!-- testcases.Testclass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
