@@ -1,3 +1,4 @@
+
 /**
  * 
  */
@@ -44,23 +45,22 @@ Testclass(){
 	public void createPOMObject() {
 		
 		loginpg = new LoginPage(driver);
-		loginpg.loginToDemoBank(properties.getProperty("user"), properties.getProperty("password"));
-
-		homePage = new HomePage(driver);
+        homePage = new HomePage(driver);
 		
 	}
 
 	@BeforeMethod
     public void loginToApplication() throws EncryptedDocumentException, IOException
     {
+		
 	    System.out.println("login To Application");
+	    loginpg.loginToDemoBank(properties.getProperty("user"), properties.getProperty("password"));
+	   // String userName = Utility.getDataFromExcel("demoBank",1,0);
+	   // loginpg.sendUserName(userName);
 	    
-	    String userName = Utility.getDataFromExcel("demoBank",1,0);
-	    loginpg.sendUserName(userName);
-	    
-	    String Passward = Utility.getDataFromExcel("demoBank",1,1);
-	    loginpg.sendPassward(Passward);
-	    loginpg.clickOnLogin();
+	   // String Passward = Utility.getDataFromExcel("demoBank",1,1);
+	  //  loginpg.sendPassward(Passward);
+	  //  loginpg.clickOnLogin();
 	 
    }
    @Test
