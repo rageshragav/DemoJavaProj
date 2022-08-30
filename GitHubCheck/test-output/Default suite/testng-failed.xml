@@ -5,7 +5,12 @@
     <classes>
       <class name="testcases.Testclass">
         <methods>
-          <include name="login"/>
+          <include name="createPOMObject"/>
+          <include name="toVerifyNewCustomerTab"/>
+          <include name="clearPOMObject"/>
+          <include name="closedBrowser"/>
+          <include name="logoutFromApplication"/>
+          <include name="loginToApplication"/>
           <include name="launchBrowser"/>
         </methods>
       </class> <!-- testcases.Testclass -->
