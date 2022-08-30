@@ -45,7 +45,7 @@ public class Utility {
 			return data;
 			 
 	  }	
-	public static void getScreenshot(WebDriver driver,String screenshotname_testid) throws IOException
+	public static void getScreenshot(WebDriver driver,int screenshotname_testid) throws IOException
 	  {
 		    //Screenshot code
 		  

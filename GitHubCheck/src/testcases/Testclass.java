@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -50,18 +51,24 @@ Testclass(){
 	}
 
 	@BeforeMethod
-    public void loginToApplication() throws EncryptedDocumentException, IOException
+    public void loginToApplication() throws EncryptedDocumentException, IOException, InterruptedException
     {
 		
-	    System.out.println("login To Application");
-	    loginpg.loginToDemoBank(properties.getProperty("user"), properties.getProperty("password"));
-	   // String userName = Utility.getDataFromExcel("demoBank",1,0);
-	   // loginpg.sendUserName(userName);
+	    for(int row=0;row<4;row++) {
+	    	 for(int cell=0;cell<row;cell++) {	
+	   String userName = Utility.getDataFromExcel("Sheet1",row,cell);
+	   loginpg.sendUserName(userName);
 	    
-	   // String Passward = Utility.getDataFromExcel("demoBank",1,1);
-	  //  loginpg.sendPassward(Passward);
-	  //  loginpg.clickOnLogin();
-	 
+	    String Password = Utility.getDataFromExcel("Sheet1",row,cell);
+	   loginpg.sendPassward(Password);
+	   loginpg.clickOnLogin();
+	   driver.switchTo().alert().accept();
+	   System.out.println("invalid credentials");
+	    }
+	    }
+	   System.out.println("login To Application");
+	   Thread.sleep(5000);
+	    loginpg.loginToDemoBank(properties.getProperty("user"), properties.getProperty("password"));
    }
    @Test
    public void toVerifyNewCustomerTab()
@@ -72,8 +79,8 @@ Testclass(){
 	  homePage.opennewCustomerPage();
 	  String url = driver.getCurrentUrl();
 	  String title = driver.getTitle();
-	  softAssert.assertEquals(url, "https://demo.guru99.com/V1/html/Managerhomepage.php");
-	  softAssert.assertEquals(title,"GTPL Bank Manager HomePage");
+	  softAssert.assertEquals(url, "https://demo.guru99.com/V1/html/addcustomerpage.php");
+	  softAssert.assertEquals(title," Gtpl Bank New Customer Entry Page ");
 	  softAssert.assertAll();
    }
    @AfterMethod
@@ -81,7 +88,7 @@ Testclass(){
    {
 	   if(ITestResult.FAILURE == result.getStatus())
 	   {
-		   Utility.getScreenshot(driver, "login test");
+		   Utility.getScreenshot(driver, testID);
 	   }
 	    System.out.println("logout From Application");
 	    homePage.clickOnlogOutTab();
@@ -96,9 +103,9 @@ Testclass(){
    public void closedBrowser()
    {
 	    System.out.println("closedBrowser");
-	    driver.quit();
-	    driver = null;
-	    System.gc();//to delete the object
+	//    driver.quit();
+	   // driver = null;
+	    //System.gc();//to delete the object
    }
 }
 
