@@ -72,8 +72,8 @@ Testclass(){
 	  homePage.opennewCustomerPage();
 	  String url = driver.getCurrentUrl();
 	  String title = driver.getTitle();
-	  softAssert.assertEquals(url, "");
-	  softAssert.assertEquals(title,"");
+	  softAssert.assertEquals(url, "https://demo.guru99.com/V1/html/Managerhomepage.php");
+	  softAssert.assertEquals(title,"GTPL Bank Manager HomePage");
 	  softAssert.assertAll();
    }
    @AfterMethod
@@ -81,7 +81,7 @@ Testclass(){
    {
 	   if(ITestResult.FAILURE == result.getStatus())
 	   {
-		   Utility.getScreenshot(driver, testID);
+		   Utility.getScreenshot(driver, "login test");
 	   }
 	    System.out.println("logout From Application");
 	    homePage.clickOnlogOutTab();

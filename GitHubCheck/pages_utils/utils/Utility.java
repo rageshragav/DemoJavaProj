@@ -45,7 +45,7 @@ public class Utility {
 			return data;
 			 
 	  }	
-	public static void getScreenshot(WebDriver driver,int testID) throws IOException
+	public static void getScreenshot(WebDriver driver,String screenshotname_testid) throws IOException
 	  {
 		    //Screenshot code
 		  
@@ -54,7 +54,9 @@ public class Utility {
 		    SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH mm ss");  
 		    Date date = new Date();  
 		    String stamp = formatter.format(date);  
-		    File dest = new File("E:\\selenium\\New folder\\test-"+testID+stamp+".jpg");
+		  //  File dest = new File("E:\\selenium\\New folder\\test-"+testID+stamp+".jpg");
+		    File dest = new File("./Screenshots/"+screenshotname_testid+".png");
+			
 		    FileHandler.copy(src, dest);
 		  
 	  }
