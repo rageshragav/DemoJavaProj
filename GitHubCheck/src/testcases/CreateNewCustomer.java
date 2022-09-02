@@ -44,14 +44,14 @@ public class CreateNewCustomer extends BaseClass {
 	    driver.switchTo().frame(frame2);
 	    driver.findElement(By.xpath("//div[@id='dismiss-button']/div/span")).click();
 	    driver.switchTo().defaultContent();
-		newCustomerPage.enterCustomerName();
-		newCustomerPage.selectDateOfBirth();
-		newCustomerPage.enterAddress();
-		newCustomerPage.enterCity();
-		newCustomerPage.enterState();
-		newCustomerPage.enterpin();
-		newCustomerPage.enterTelephonNumber();
-		newCustomerPage.enterEmail();
+		newCustomerPage.enterCustomerName(null);
+		newCustomerPage.selectDateOfBirth(null);
+		newCustomerPage.enterAddress(null);
+		newCustomerPage.enterCity(null);
+		newCustomerPage.enterState(null);
+		newCustomerPage.enterpin(0);
+		newCustomerPage.enterTelephonNumber(0);
+		newCustomerPage.enterEmail(null);
 		//Thread.sleep(4000);
 		
 	}

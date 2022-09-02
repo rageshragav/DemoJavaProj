@@ -21,7 +21,9 @@ import org.testng.asserts.SoftAssert;
 import base.BaseClass;
 import pages.HomePage;
 import pages.LoginPage;
+import pages.NewCustomerPage;
 import utils.Utility;
+//import utils.object;
 
 /**
  * @author ragesh
@@ -34,6 +36,7 @@ public class Testclass extends BaseClass {
 	 */
 public	LoginPage loginpg;
 public	HomePage homePage;
+public	NewCustomerPage CustomerPg;
 private int testID;
 
 	
@@ -47,31 +50,35 @@ Testclass(){
 		
 		loginpg = new LoginPage(driver);
         homePage = new HomePage(driver);
-		
+		CustomerPg = new NewCustomerPage(driver);
 	}
 
 	@BeforeMethod
     public void loginToApplication() throws EncryptedDocumentException, IOException, InterruptedException
     {
 		
-	    for(int row=0;row<4;row++) {
-	    	 for(int cell=0;cell<row;cell++) {	
-	   String userName = Utility.getDataFromExcel("Sheet1",row,cell);
-	   loginpg.sendUserName(userName);
-	    
-	    String Password = Utility.getDataFromExcel("Sheet1",row,cell);
-	   loginpg.sendPassward(Password);
+		  String data = Utility.getDataFromExcel("Sheet1","C:\\Users\\admin\\git\\DemoJavaProj\\GitHubCheck\\resources\\demobank.xlsx");
+		  loginpg.sendUserName(data);
+	      loginpg.sendPassward(data);
+	   
 	   loginpg.clickOnLogin();
 	   driver.switchTo().alert().accept();
 	   System.out.println("invalid credentials");
-	    }
-	    }
+	
+		
+	
+		
 	   System.out.println("login To Application");
 	   Thread.sleep(5000);
 	    loginpg.loginToDemoBank(properties.getProperty("user"), properties.getProperty("password"));
-   }
+    }
+	//@Dataprovider(name="loginDataProviderMethod")
+	//public object [][] loginDataProviderMethod()
+//	{
+	//	return login;
+	//}
    @Test
-   public void toVerifyNewCustomerTab()
+   public void toVerifyNewCustomerTab() throws EncryptedDocumentException, IOException
    {
 	  testID = 101;
 	  SoftAssert softAssert = new SoftAssert();
@@ -82,6 +89,14 @@ Testclass(){
 	  softAssert.assertEquals(url, "https://demo.guru99.com/V1/html/addcustomerpage.php");
 	  softAssert.assertEquals(title," Gtpl Bank New Customer Entry Page ");
 	  softAssert.assertAll();
+	  
+	  // String customername = Utility.getCustomerDataFromExcel("Sheet1",1,0);
+	 //  CustomerPg.sendCustomerName(customername);
+	 //  CustomerPg.selectGender();
+	 //  String DateOfBirth = Utility.getCustomerDataFromExcel("Sheet1",1,1);
+	 //  CustomerPg.selectDateOfBirth(DateOfBirth);
+	 //  String Address = Utility.getCustomerDataFromExcel("Sheet1",1,1);
+	 //  CustomerPg.enterAddress(Address);
    }
    @AfterMethod
    public void logoutFromApplication(ITestResult result) throws IOException

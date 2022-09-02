@@ -65,11 +65,11 @@ public class NewCustomerPage
 		 newCustomerMenuItem.click();
 	   }
 	
-	public void enterCustomerName()
+	public void enterCustomerName(String NameOfCustomer)
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(customerName));
-		 customerName.sendKeys("satish");
+		 customerName.sendKeys("NameOfCustomer");
 	   }
 	public void selectGender()
 	   {
@@ -77,47 +77,47 @@ public class NewCustomerPage
 		 wait.until(ExpectedConditions.visibilityOf(selectGender));
 		 selectGender.click();
 	   }
-	public void selectDateOfBirth()
+	public void selectDateOfBirth(String DOB)
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(dateOfBirthSelect));
-		 dateOfBirthSelect.sendKeys("08101995");
+		 dateOfBirthSelect.sendKeys("DOB");
 	   }
-	public void enterAddress()
+	public void enterAddress(String addresName)
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(address));
-		 address.sendKeys("this is myh house address");
+		 address.sendKeys("addresName");
 	   }
-	public void enterCity()
+	public void enterCity(String cityName)
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(city));
-		 city.sendKeys("pune");
+		 city.sendKeys("cityName");
 	   }
-	public void enterState()
+	public void enterState(String stateName)
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(state));
-		 state.sendKeys("UP");
+		 state.sendKeys("stateName");
 	   }
-	public void enterpin()
+	public void enterpin(int pinNo)
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(pin));
-		 pin.sendKeys("451263");
+		 pin.sendKeys("pinNo");
 	   }
-	public void enterTelephonNumber()
+	public void enterTelephonNumber(int phoneNo)
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(telephoneNumber));
-		 telephoneNumber.sendKeys("071894452");
+		 telephoneNumber.sendKeys("phoneNo");
 	   }
-	public void enterEmail()
+	public void enterEmail(String emailId)
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(email));
-		 email.sendKeys("451263");
+		 email.sendKeys("emailId");
 	   }
 	public void clickOnSubmitButton()
 	   {

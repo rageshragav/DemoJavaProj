@@ -19,16 +19,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
 public class Utility {
-	public static String getDataFromExcel(String Sheet,int row,int cell) throws EncryptedDocumentException, IOException
+	public static String getDataFromExcel(String SheetName,String filePath) throws EncryptedDocumentException, IOException
 	  {
 		    //excel sheet code
 		    String data = "";
 		    String path ="./resources/demobank.xlsx";
 		    FileInputStream file = new FileInputStream(path);
 		    Workbook wb= WorkbookFactory.create(file);
-		    Sheet sheet = wb.getSheet(Sheet);
-			Row rows  = sheet.getRow(row);
-			Cell cells =rows.getCell(cell);
+		    Sheet sheet = wb.getSheet(SheetName);
+			Row rows  = sheet.getRow(1);
+			Cell cells =rows.getCell(0);
 			try
 			{
 				data = cells.getStringCellValue();
