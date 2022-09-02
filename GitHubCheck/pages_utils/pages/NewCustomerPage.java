@@ -69,7 +69,7 @@ public class NewCustomerPage
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(customerName));
-		 customerName.sendKeys("NameOfCustomer");
+		 customerName.sendKeys(NameOfCustomer);
 	   }
 	public void selectGender()
 	   {
@@ -81,43 +81,43 @@ public class NewCustomerPage
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(dateOfBirthSelect));
-		 dateOfBirthSelect.sendKeys("DOB");
+		 dateOfBirthSelect.sendKeys(DOB);
 	   }
 	public void enterAddress(String addresName)
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(address));
-		 address.sendKeys("addresName");
+		 address.sendKeys(addresName);
 	   }
 	public void enterCity(String cityName)
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(city));
-		 city.sendKeys("cityName");
+		 city.sendKeys(cityName);
 	   }
 	public void enterState(String stateName)
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(state));
-		 state.sendKeys("stateName");
+		 state.sendKeys(stateName);
 	   }
-	public void enterpin(int pinNo)
+	public void enterpin(String pinNo)
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(pin));
-		 pin.sendKeys("pinNo");
+		 pin.sendKeys(pinNo);
 	   }
-	public void enterTelephonNumber(int phoneNo)
+	public void enterTelephonNumber(String phoneNo)
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(telephoneNumber));
-		 telephoneNumber.sendKeys("phoneNo");
+		 telephoneNumber.sendKeys(phoneNo);
 	   }
 	public void enterEmail(String emailId)
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(email));
-		 email.sendKeys("emailId");
+		 email.sendKeys(emailId);
 	   }
 	public void clickOnSubmitButton()
 	   {

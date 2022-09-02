@@ -16,6 +16,9 @@ public class LoginPage
 	@FindBy (xpath = "//input[@name='btnLogin']")
 	private WebElement login;
 	
+	@FindBy (xpath = "//a[contains(text(),'Log out')]")
+	private WebElement logout;
+	
 	public LoginPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver,this);
@@ -37,6 +40,10 @@ public class LoginPage
    public void clickOnLogin()
    {
 	  login.click();
+   }
+   public void clickOnLogout()
+   {
+	  logout.click();
    }
    
    public void loginToDemoBank(String userName,String passWord) {
