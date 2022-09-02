@@ -12,7 +12,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class NewCustomerPage 
 {
-	@FindBy (xpath = "//*[@id=\"message\"]")
+	@FindBy (xpath = "//a[contains(text(),'New Customer')]")
+	public WebElement newCustomerMenuItem;
+	
+	
+	@FindBy (xpath = "//*[contains(text(),'Customer Name')]//following::input[1]")
 	private WebElement customerName;
 	
 	@FindBy (xpath = "(//input[@type='radio'])[1]")
@@ -52,7 +56,15 @@ public class NewCustomerPage
 	public NewCustomerPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver,this);
+		this.driver = driver;
 	}
+	
+	public void clickOnNewCustomerMenuItem()
+	   {
+		
+		 newCustomerMenuItem.click();
+	   }
+	
 	public void enterCustomerName()
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -75,7 +87,7 @@ public class NewCustomerPage
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(address));
-		 address.sendKeys("satish");
+		 address.sendKeys("this is myh house address");
 	   }
 	public void enterCity()
 	   {

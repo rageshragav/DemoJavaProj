@@ -38,7 +38,8 @@ public class BaseClass {
 	public BaseClass() {
 		try {
 			properties = new Properties();
-			FileInputStream ip = new FileInputStream("C:\\Users\\admin\\git\\DemoJavaProj\\GitHubCheck\\config.properties");
+			FileInputStream ip = new FileInputStream("./config.properties/");
+			//FileInputStream ip = new FileInputStream("C:\\Users\\admin\\git\\DemoJavaProj\\GitHubCheck\\config.properties");
 			properties.load(ip);
 		} catch (Exception e) {
 			// TODO: handle exception
