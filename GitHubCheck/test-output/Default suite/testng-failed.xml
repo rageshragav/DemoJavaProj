@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.CreateNewCustomer">
+      <class name="testcases.AddNewAddress">
         <methods>
           <include name="createPOMObject"/>
-          <include name="createNewCustomer"/>
           <include name="launchBrowser"/>
+          <include name="createNewAddress"/>
         </methods>
-      </class> <!-- testcases.CreateNewCustomer -->
+      </class> <!-- testcases.AddNewAddress -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -15,7 +15,7 @@ import org.testng.log4testng.Logger;
 import base.BaseClass;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.NewCustomerPage;
+import pages.NewAddressPage;
 import utils.XLUtils;
 
 /**
@@ -26,7 +26,7 @@ public class LoginScenarios extends BaseClass{
 
 	public	LoginPage loginpg;
 	public	HomePage homePage;
-	public	NewCustomerPage CustomerPg;
+	public	NewAddressPage CustomerPg;
 	
 	@DataProvider(name="logindata")
 	String[][] getData() throws IOException{
@@ -51,7 +51,7 @@ public class LoginScenarios extends BaseClass{
 		
 		loginpg = new LoginPage(driver);
         homePage = new HomePage(driver);
-		CustomerPg = new NewCustomerPage(driver);
+		CustomerPg = new NewAddressPage(driver);
 	}
 	
 	@Test(dataProvider = "logindata")

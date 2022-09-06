@@ -7,13 +7,16 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage 
 {
-	@FindBy (xpath = "//input[@name='uid']")
+	@FindBy (xpath = "//input[@id='ap_email']")
 	private WebElement userId;
 	
-	@FindBy (xpath = "//input[@name='password']")
+	@FindBy (xpath = "//input[@id='continue']")
+	private WebElement continueButton;
+	
+	@FindBy (xpath = "//input[@id='ap_password']")
 	private WebElement passward;
 	
-	@FindBy (xpath = "//input[@name='btnLogin']")
+	@FindBy (xpath = "//input[@id='signInSubmit']")
 	private WebElement login;
 	
 	@FindBy (xpath = "//a[contains(text(),'Log out')]")
@@ -46,8 +49,9 @@ public class LoginPage
 	  logout.click();
    }
    
-   public void loginToDemoBank(String userName,String passWord) {
+   public void loginToAmazon(String userName,String passWord) {
 	   sendUserName(userName);
+	   continueButton.click();
 	   sendPassward(passWord);
 	   login.click();
    }

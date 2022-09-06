@@ -13,6 +13,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.InvalidElementStateException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -60,6 +61,15 @@ public class Utility {
 		    FileHandler.copy(src, dest);
 		  
 	  }
+	
+	public static void javaScriptExecuterScrollDownPage(WebDriver driver,int pixel) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+	       
+        // This  will scroll down the page by  1000 pixel vertical		
+        js.executeScript("window.scrollBy(0,"+pixel+")");
+
+	}
 
 
 }

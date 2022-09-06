@@ -21,7 +21,7 @@ import org.testng.asserts.SoftAssert;
 import base.BaseClass;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.NewCustomerPage;
+import pages.NewAddressPage;
 import utils.Utility;
 //import utils.object;
 
@@ -36,7 +36,7 @@ public class Testclass extends BaseClass {
 	 */
 public	LoginPage loginpg;
 public	HomePage homePage;
-public	NewCustomerPage CustomerPg;
+public	NewAddressPage CustomerPg;
 private int testID;
 
 	
@@ -50,7 +50,7 @@ Testclass(){
 		
 		loginpg = new LoginPage(driver);
         homePage = new HomePage(driver);
-		CustomerPg = new NewCustomerPage(driver);
+		CustomerPg = new NewAddressPage(driver);
 	}
 
 	@BeforeMethod
@@ -70,7 +70,7 @@ Testclass(){
 		
 	   System.out.println("login To Application");
 	   Thread.sleep(5000);
-	    loginpg.loginToDemoBank(properties.getProperty("user"), properties.getProperty("password"));
+	    loginpg.loginToAmazon(properties.getProperty("user"), properties.getProperty("password"));
     }
 	//@Dataprovider(name="loginDataProviderMethod")
 	//public object [][] loginDataProviderMethod()
@@ -90,13 +90,7 @@ Testclass(){
 	  softAssert.assertEquals(title," Gtpl Bank New Customer Entry Page ");
 	  softAssert.assertAll();
 	  
-	  // String customername = Utility.getCustomerDataFromExcel("Sheet1",1,0);
-	 //  CustomerPg.sendCustomerName(customername);
-	 //  CustomerPg.selectGender();
-	 //  String DateOfBirth = Utility.getCustomerDataFromExcel("Sheet1",1,1);
-	 //  CustomerPg.selectDateOfBirth(DateOfBirth);
-	 //  String Address = Utility.getCustomerDataFromExcel("Sheet1",1,1);
-	 //  CustomerPg.enterAddress(Address);
+	 
    }
    @AfterMethod
    public void logoutFromApplication(ITestResult result) throws IOException
