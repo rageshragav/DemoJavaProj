@@ -2,6 +2,7 @@ package pages;
 
 import java.time.Duration;
 
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -40,6 +41,10 @@ public class NewAddressPage {
 
 	@FindBy(xpath = "//span[@id='address-ui-widgets-form-submit-button']")
 	private WebElement addAddressBtn;
+	
+	@FindBy(xpath = "//span[@id='a-autoid-2")
+	private WebElement saveAddressBtn;
+
 
 	private WebDriver driver;
 	private WebDriverWait wait;
@@ -111,6 +116,18 @@ public class NewAddressPage {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(addAddressBtn));
 		addAddressBtn.click();
+		
+	}
+	
+	public boolean saveAddressButtonVisiblity() {
+		try {
+			wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			wait.until(ExpectedConditions.elementToBeClickable(saveAddressBtn));
+			return true;
+		} catch (ElementClickInterceptedException e) {
+			// TODO: handle exception
+			return false;
+		}
 	}
 
 }

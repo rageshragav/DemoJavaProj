@@ -7,7 +7,7 @@
         <methods>
           <include name="createPOMObject"/>
           <include name="launchBrowser"/>
-          <include name="createNewAddress"/>
+          <include name="createNewAddress" invocation-numbers="0"/>
         </methods>
       </class> <!-- testcases.AddNewAddress -->
     </classes>
