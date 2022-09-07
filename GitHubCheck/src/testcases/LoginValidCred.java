@@ -6,6 +6,9 @@ package testcases;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import base.BaseClass;
 import pages.HomePage;
 import pages.LoginPage;
@@ -32,7 +35,10 @@ public class LoginValidCred extends BaseClass{
 	
 	@Test
 	public void loginScenarios() {
+		extentTest = extent.createTest("Valid login test");
 		loginpg.loginToAmazon(properties.getProperty("user"), properties.getProperty("password"));
+		extentTest.log(Status.PASS, "login successfull");
+		extentTest.pass("user login successfull");
 		
 	}
 }
