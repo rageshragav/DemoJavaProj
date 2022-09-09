@@ -37,9 +37,12 @@ public class BaseClass {
 	@BeforeTest
 	public void launchBrowser() {
 
-		 extent = new ExtentReports();
+		/* extent = new ExtentReports();
 		 spark = new ExtentSparkReporter("Extentreport.html");
 		extent.attachReporter(spark);
+		spark.config().setReportName("Amzon web test results");
+		spark.config().setDocumentTitle("Test results");
+		extent.setSystemInfo("Ragesh", "Technical engineer");*/
 		driver = WebDriverManager.chromedriver().create();
 		driver.manage().window().maximize();
 		driver.get(properties.getProperty("url"));
@@ -59,7 +62,7 @@ public class BaseClass {
 		}
 	}
 	
-	@AfterTest
+	//@AfterTest
 	public void flushExtent() {
 		extent.flush();
 	}

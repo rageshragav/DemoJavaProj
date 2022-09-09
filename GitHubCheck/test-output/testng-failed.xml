@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.AddNewAddress">
+      <class name="testcases.LoginValidCred">
         <methods>
           <include name="createPOMObject"/>
+          <include name="loginScenarios"/>
           <include name="launchBrowser"/>
-          <include name="createNewAddress" invocation-numbers="0"/>
         </methods>
-      </class> <!-- testcases.AddNewAddress -->
+      </class> <!-- testcases.LoginValidCred -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

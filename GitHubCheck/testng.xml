@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parent_Suite">
+<listeners>
+<listener class-name="utils.Listners"/>
+</listeners>
+
+<test name="Amazon Regression test run">
+    <classes>
+         	    <class name="testcases.LoginValidCred"/>
+                
+    </classes>
+    </test>
+</suite>
+<!-- Suite -->

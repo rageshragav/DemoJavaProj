@@ -2,28 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-07T17:21:35 IST" name="Default suite" finished-at="2022-09-07T17:21:42 IST" duration-ms="6660">
+  <suite started-at="2022-09-09T11:47:06 IST" name="Parent_Suite" finished-at="2022-09-09T11:47:11 IST" duration-ms="4874">
     <groups>
     </groups>
-    <test started-at="2022-09-07T17:21:35 IST" name="Default test" finished-at="2022-09-07T17:21:42 IST" duration-ms="6660">
+    <test started-at="2022-09-09T11:47:06 IST" name="Amazon Regression test run" finished-at="2022-09-09T11:47:11 IST" duration-ms="4874">
       <class name="testcases.LoginValidCred">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.LoginValidCred@6989da5e]" started-at="2022-09-07T17:21:35 IST" name="launchBrowser" finished-at="2022-09-07T17:21:40 IST" duration-ms="5114" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.LoginValidCred@21be3395]" started-at="2022-09-09T11:47:06 IST" name="launchBrowser" finished-at="2022-09-09T11:47:10 IST" duration-ms="3707" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="createPOMObject()[pri:0, instance:testcases.LoginValidCred@6989da5e]" started-at="2022-09-07T17:21:40 IST" name="createPOMObject" finished-at="2022-09-07T17:21:40 IST" duration-ms="30" status="PASS">
+        <test-method is-config="true" signature="createPOMObject()[pri:0, instance:testcases.LoginValidCred@21be3395]" started-at="2022-09-09T11:47:10 IST" name="createPOMObject" finished-at="2022-09-09T11:47:10 IST" duration-ms="29" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPOMObject -->
-        <test-method signature="loginScenarios()[pri:0, instance:testcases.LoginValidCred@6989da5e]" started-at="2022-09-07T17:21:40 IST" name="loginScenarios" finished-at="2022-09-07T17:21:42 IST" duration-ms="1136" status="PASS">
+        <test-method signature="loginScenarios()[pri:0, instance:testcases.LoginValidCred@21be3395]" started-at="2022-09-09T11:47:10 IST" name="loginScenarios" finished-at="2022-09-09T11:47:11 IST" duration-ms="1093" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginScenarios -->
-        <test-method is-config="true" signature="flushExtent()[pri:0, instance:testcases.LoginValidCred@6989da5e]" started-at="2022-09-07T17:21:42 IST" name="flushExtent" finished-at="2022-09-07T17:21:42 IST" duration-ms="335" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- flushExtent -->
       </class> <!-- testcases.LoginValidCred -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Amazon Regression test run -->
+  </suite> <!-- Parent_Suite -->
 </testng-results>
