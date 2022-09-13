@@ -13,14 +13,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage 
 {
-	@FindBy (xpath = "//a[text()='New Customer']")
-	private WebElement newCustomer;
+	@FindBy (xpath = "//input[@id='twotabsearchtextbox']")
+	private WebElement searchBar;
 	
-	@FindBy (xpath = "//a[text()='Edit Customer']")
-	private WebElement editCustomer;
+	@FindBy (xpath = "//input[@id='nav-search-submit-button']")
+	private WebElement searchIcon;
 	
-	@FindBy (xpath = "//a[text()='Delete Customer']")
-	private WebElement deleteCustomer;
+	@FindBy (xpath = "//span[contains(text(),'Apple iPhone 12 (64GB) - Blue')]")
+	private WebElement searchResult;
 	
 	@FindBy (xpath = "//a[text()='New Account']")
 	private WebElement newAccount;
@@ -51,24 +51,25 @@ public class HomePage
 	//	new WebDriverWait(driver,Duration.ofSeconds(10));
 		 actions = new Actions(driver);
 	}
-	public void opennewCustomerPage()
+	public void searchItem(String itemToSearch)
 	   {
 		
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		 wait.until(ExpectedConditions.visibilityOf(newCustomer));
-		 actions.moveToElement(newCustomer).build().perform();
+		 wait.until(ExpectedConditions.visibilityOf(searchBar));
+		 searchBar.clear();
+		 searchBar.sendKeys(itemToSearch);
 	   }
-	public void openeditCustomrPage()
+	public void clickOnSearchIcon()
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		 wait.until(ExpectedConditions.visibilityOf(editCustomer));
-		 actions.moveToElement(editCustomer).build().perform();
+		 wait.until(ExpectedConditions.visibilityOf(searchIcon));
+		 searchIcon.click();
 	   }
-	public void opendeleteCustomrPage()
+	public void clickOnSearchResult()
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		 wait.until(ExpectedConditions.visibilityOf(deleteCustomer));
-		 actions.moveToElement(deleteCustomer).build().perform();
+		 wait.until(ExpectedConditions.visibilityOf(searchResult));
+		 searchResult.click();
 	   }
 	public void opennewAccountPage()
 	   {

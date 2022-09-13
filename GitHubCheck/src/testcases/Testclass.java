@@ -83,7 +83,7 @@ Testclass(){
 	  testID = 101;
 	  SoftAssert softAssert = new SoftAssert();
 	  System.out.println("to Verify NewCustomer Tab/Button");
-	  homePage.opennewCustomerPage();
+	//  homePage.opennewCustomerPage();
 	  String url = driver.getCurrentUrl();
 	  String title = driver.getTitle();
 	  softAssert.assertEquals(url, "https://demo.guru99.com/V1/html/addcustomerpage.php");

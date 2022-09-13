@@ -34,7 +34,7 @@ public class LoginValidCred extends BaseClass{
 	
 	
 	@Test
-	public void loginScenarios() {
+	public void loginWithValidCredentails() {
 		//extentTest = extent.createTest("Valid login test");
 		loginpg.loginToAmazon(properties.getProperty("user"), properties.getProperty("password"));
 		//extentTest.log(Status.PASS, "login successfull");

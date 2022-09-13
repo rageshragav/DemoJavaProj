@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.Set;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Cell;
@@ -20,6 +22,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
 public class Utility {
+	
+	public static String mwh;
 	public static String getDataFromExcel(String SheetName,String filePath) throws EncryptedDocumentException, IOException
 	  {
 		    //excel sheet code
@@ -69,6 +73,24 @@ public class Utility {
         // This  will scroll down the page by  1000 pixel vertical		
         js.executeScript("window.scrollBy(0,"+pixel+")");
 
+	}
+	
+	public static void switchToNewWindow(WebDriver driver) {
+		mwh=driver.getWindowHandle();
+		Set<String> s=driver.getWindowHandles(); //this method will gives you the handles of all opened windows
+
+		Iterator<String> ite=s.iterator();
+
+		while(ite.hasNext())
+		{
+		    String popupHandle=ite.next().toString();
+		    if(!popupHandle.contains(mwh))
+		    {
+		        driver.switchTo().window(popupHandle);
+		       
+		        //driver.switchTo().window(mwh);
+		    }
+		}
 	}
 
 

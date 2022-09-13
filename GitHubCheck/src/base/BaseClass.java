@@ -8,7 +8,9 @@ import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -34,7 +36,7 @@ public class BaseClass {
 	 * @param args
 	 */
 
-	@BeforeTest
+	@BeforeSuite
 	public void launchBrowser() {
 
 		/* extent = new ExtentReports();
@@ -62,8 +64,9 @@ public class BaseClass {
 		}
 	}
 	
-	//@AfterTest
+	@AfterSuite
 	public void flushExtent() {
-		extent.flush();
+		driver.quit();
+		//extent.flush();
 	}
 }

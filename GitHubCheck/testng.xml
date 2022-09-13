@@ -8,8 +8,10 @@
 <test name="Amazon Regression test run">
     <classes>
          	    <class name="testcases.LoginValidCred"/>
+                <class name="testcases.AddItemToCart"/>
                 
     </classes>
+    
     </test>
 </suite>
 <!-- Suite -->
