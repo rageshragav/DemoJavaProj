@@ -21,10 +21,10 @@ public class ViewOrdersPage {
 	@FindBy(xpath = "(//a[contains(text(),'Buy Again')])[2]")
 	public WebElement buyAgain;
 	
-	@FindBy(xpath = "//*[@class='a-box-inner']//following::div/h2[contains(text(),'Your Addresses')]")
+	@FindBy(xpath = "//a[contains(text(),'Not Yet Shipped')]")
 	public WebElement notYetShipped;
 	
-	@FindBy(xpath = "//*[@class='a-box-inner']//following::div/h2[contains(text(),'Your Addresses')]")
+	@FindBy(xpath = "//a[contains(text(),'Cancelled Orders')]")
 	public WebElement cancelledOrders;
 	
 	private WebDriver driver;
@@ -41,7 +41,7 @@ public class ViewOrdersPage {
 	   {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 wait.until(ExpectedConditions.visibilityOf(orderBox));
-		 actions.moveToElement(orderBox).build().perform();
+		orderBox.click();
 	   }
 	public void clickOnorders() {
 
