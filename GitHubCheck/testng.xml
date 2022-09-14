@@ -9,6 +9,8 @@
     <classes>
          	    <class name="testcases.LoginValidCred"/>
                 <class name="testcases.AddItemToCart"/>
+                <class name="testcases.AddBestSellerItemToWishList"/>
+                <class name="testcases.ViewOrders"/>
                 
     </classes>
     

@@ -5,11 +5,11 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
-import pages.BestSellerPage;
+import pages.BestSellerItemPage;
 import pages.LoginPage;
 
 public class AddBestSellerItemToWishList extends BaseClass {
-	public BestSellerPage bestSellerPage;
+	public BestSellerItemPage bestSellerItemPage;
 	public LoginPage loginPage;
 
  
@@ -19,7 +19,7 @@ public class AddBestSellerItemToWishList extends BaseClass {
 @BeforeClass
 	public void createPOMObject() {
 
-	bestSellerPage = new BestSellerPage(driver);
+	bestSellerItemPage = new BestSellerItemPage(driver);
 		loginPage = new pages.LoginPage(driver);
 
 	}
@@ -34,13 +34,16 @@ public class AddBestSellerItemToWishList extends BaseClass {
 	@Test(priority = 2)
 	public void BestSellerBook()
 			throws InterruptedException {
-		bestSellerPage.openbestSeller();
-		bestSellerPage.openHotNewReleasesPage();
-		bestSellerPage.getTextOfHotNewReleasesElement();
-		bestSellerPage.clickOnBooks();
-		bestSellerPage.clickOnactionAndAdeventure();
-		bestSellerPage.clickOnwarOfLankaBook();
-		bestSellerPage.clickOnAddToWishListButton();
+		bestSellerItemPage.openbestSeller();
+		bestSellerItemPage.openHotNewReleasesPage();
+		bestSellerItemPage.getTextOfHotNewReleasesElement();
+		bestSellerItemPage.clickOnBooks();
+		bestSellerItemPage.clickOnactionAndAdeventure();
+		bestSellerItemPage.clickOnwarOfLankaBook();
+		bestSellerItemPage.clickOnAddToWishListButton();
+		bestSellerItemPage.clickOncreateListBtn();
+		bestSellerItemPage.clickOnviewWishListBtn();
+		bestSellerItemPage.clickOndeleteItemfromWishListBtn();
 		
 
 }

@@ -6,12 +6,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
-import pages.BestSellerPage;
+import pages.BestSellerItemPage;
 import pages.LoginPage;
 import pages.ViewOrdersPage;
 
 public class ViewOrders extends BaseClass {
-	public BestSellerPage bestSellerPage;
+	public BestSellerItemPage bestSellerItemPage;
 	public LoginPage loginPage;
 	public ViewOrdersPage viewOrdersPage;
 
@@ -22,7 +22,7 @@ public class ViewOrders extends BaseClass {
 @BeforeClass
 	public void createPOMObject() {
 
-	bestSellerPage = new BestSellerPage(driver);
+	bestSellerItemPage = new BestSellerItemPage(driver);
 		loginPage = new LoginPage(driver);
 		viewOrdersPage = new ViewOrdersPage(driver);
 
