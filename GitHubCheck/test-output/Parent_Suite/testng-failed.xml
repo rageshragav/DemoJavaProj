@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Parent_Suite]" guice-stage="DEVELOPMENT">
@@ -18,3 +19,41 @@
     </classes>
   </test> <!-- Amazon Regression test run(failed) -->
 </suite> <!-- Failed suite [Parent_Suite] -->
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Parent_Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utils.Listners"/>
+  </listeners>
+  <test thread-count="5" name="Amazon Regression test run(failed)">
+    <classes>
+      <class name="testcases.AddItemToCart">
+        <methods>
+          <include name="loginToAmazon"/>
+          <include name="flushExtent"/>
+          <include name="createPOMObject"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- testcases.AddItemToCart -->
+      <class name="testcases.AddBestSellerItemToWishList">
+        <methods>
+          <include name="flushExtent"/>
+          <include name="createPOMObject"/>
+          <include name="LoginPage"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- testcases.AddBestSellerItemToWishList -->
+      <class name="testcases.ViewOrders">
+        <methods>
+          <include name="flushExtent"/>
+          <include name="ViewOrdersPage"/>
+          <include name="LoginPage"/>
+          <include name="createPOMObject"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- testcases.ViewOrders -->
+    </classes>
+  </test> <!-- Amazon Regression test run(failed) -->
+</suite> <!-- Failed suite [Parent_Suite] -->
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj.git
