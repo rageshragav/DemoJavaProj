@@ -41,7 +41,7 @@ public class AddBestSellerItemToWishList extends BaseClass {
 		bestSellerItemPage.clickOnactionAndAdeventure();
 		bestSellerItemPage.clickOnwarOfLankaBook();
 		bestSellerItemPage.clickOnAddToWishListButton();
-		bestSellerItemPage.clickOncreateListBtn();
+		//bestSellerItemPage.clickOncreateListBtn();
 		bestSellerItemPage.clickOnviewWishListBtn();
 		bestSellerItemPage.clickOndeleteItemfromWishListBtn();
 		
