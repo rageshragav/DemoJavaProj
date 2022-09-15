@@ -12,7 +12,7 @@ package pages;
 	public class BestSellerItemPage {
 	
 
-		@FindBy (xpath = "//*[@id=\"nav-xshop\"]/a[5]")
+		@FindBy (xpath = "(//a[text()='Best Sellers'])[1]")
 		private WebElement bestSeller;
 		
 		@FindBy (xpath = "//a[text()='Hot New Releases']")
@@ -34,7 +34,7 @@ package pages;
 		@FindBy (xpath = " //*[@id=\"a-autoid-23\"]/span/input")
 		private WebElement createListBtn;
 		
-		@FindBy (xpath = " //*[@id=\"wl-huc-post-create-msg\"]/div[2]/span[1]/span/a")
+		@FindBy (xpath = " //*[@id=\"huc-view-your-list-button\"]/span/a")
 		private WebElement viewWishListBtn;
 		
 		@FindBy (xpath = " //input[@name='submit.deleteItem']")
@@ -86,7 +86,8 @@ package pages;
 			 createListBtn.click();
 			}
 		 public void clickOnviewWishListBtn() {
-
+			 wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				wait.until(ExpectedConditions.elementToBeClickable(viewWishListBtn));
 			 viewWishListBtn.click();
 			}
 		 public void clickOndeleteItemfromWishListBtn() {
