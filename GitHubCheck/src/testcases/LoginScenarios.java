@@ -30,7 +30,7 @@ public class LoginScenarios extends BaseClass{
 	
 	@DataProvider(name="logindata")
 	String[][] getData() throws IOException{
-		String path = "./resources/demobank.xlsx";
+		String path = "./resources/diffUsers.xlsx";
 		int row = XLUtils.getRowCount(path, "Sheet1");
 		int column = XLUtils.getCellCount(path, "Sheet1", 1);
 		
@@ -56,10 +56,13 @@ public class LoginScenarios extends BaseClass{
 	
 	@Test(dataProvider = "logindata")
 	public void loginScenarios(String userName,String passWord) {
-		loginpg.sendUserName(userName);
-	    loginpg.sendPassward(passWord);
-	    loginpg.clickOnLogin();
-	   
+		
+		loginpg.loginToAmazon(userName,passWord);
+		//loginpg.sendUserName(userName);
+	    //loginpg.sendPassward(passWord);
+	    //loginpg.clickOnLogin();
+	
+	    /*
 	   if(isAlertPresent()==true) {
 		   driver.switchTo().alert().accept();
 		   driver.switchTo().defaultContent();
@@ -69,7 +72,7 @@ public class LoginScenarios extends BaseClass{
 		   loginpg.clickOnLogout();
 		   driver.switchTo().alert().accept();
 		   driver.switchTo().defaultContent();
-	}
+	}*/
 	   
 	}
 	
