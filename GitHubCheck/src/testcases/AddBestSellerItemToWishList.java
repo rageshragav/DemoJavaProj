@@ -44,8 +44,24 @@ public class AddBestSellerItemToWishList extends BaseClass {
 		//bestSellerItemPage.clickOncreateListBtn();
 		bestSellerItemPage.clickOnviewWishListBtn();
 		bestSellerItemPage.clickOndeleteItemfromWishListBtn();
-		
-
+		bestSellerItemPage.openbestSeller();
+		bestSellerItemPage.clickOnSportsFitneesOutdoors();
+		bestSellerItemPage.clickOnCricket();
+		bestSellerItemPage.clickOnBats();
+		bestSellerItemPage.clickOnKashmirWillow();
+		bestSellerItemPage.clickOnDscbat();
+		bestSellerItemPage.clickOnPricebtn();
+		bestSellerItemPage.SelectPrice();
+		bestSellerItemPage.clickOnReviewbtn();
+		bestSellerItemPage.SelectReview();
+		bestSellerItemPage.clickOnBatSizebtn();
+		bestSellerItemPage.SelectBatSize();
+		bestSellerItemPage.clickOnBrandbtn();
+		bestSellerItemPage.SelectBrand();
+		bestSellerItemPage.clickOnSgBat();
+		bestSellerItemPage.clickOnAddToWishListButton();
+		bestSellerItemPage.clickOnviewWishListBtn();
+		bestSellerItemPage.clickOndeleteItemfromWishListBtn();
 }
 }
 
