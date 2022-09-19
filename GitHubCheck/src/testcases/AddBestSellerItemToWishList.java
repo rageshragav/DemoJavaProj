@@ -34,34 +34,8 @@ public class AddBestSellerItemToWishList extends BaseClass {
 	@Test(priority = 2)
 	public void BestSellerBook()
 			throws InterruptedException {
-		bestSellerItemPage.openbestSeller();
-		bestSellerItemPage.openHotNewReleasesPage();
-		bestSellerItemPage.getTextOfHotNewReleasesElement();
-		bestSellerItemPage.clickOnBooks();
-		bestSellerItemPage.clickOnactionAndAdeventure();
-		bestSellerItemPage.clickOnwarOfLankaBook();
-		bestSellerItemPage.clickOnAddToWishListButton();
-		//bestSellerItemPage.clickOncreateListBtn();
-		bestSellerItemPage.clickOnviewWishListBtn();
-		bestSellerItemPage.clickOndeleteItemfromWishListBtn();
-		bestSellerItemPage.openbestSeller();
-		bestSellerItemPage.clickOnSportsFitneesOutdoors();
-		bestSellerItemPage.clickOnCricket();
-		bestSellerItemPage.clickOnBats();
-		bestSellerItemPage.clickOnKashmirWillow();
-		bestSellerItemPage.clickOnDscbat();
-		bestSellerItemPage.clickOnPricebtn();
-		bestSellerItemPage.SelectPrice();
-		bestSellerItemPage.clickOnReviewbtn();
-		bestSellerItemPage.SelectReview();
-		bestSellerItemPage.clickOnBatSizebtn();
-		bestSellerItemPage.SelectBatSize();
-		bestSellerItemPage.clickOnBrandbtn();
-		bestSellerItemPage.SelectBrand();
-		bestSellerItemPage.clickOnSgBat();
-		bestSellerItemPage.clickOnAddToWishListButton();
-		bestSellerItemPage.clickOnviewWishListBtn();
-		bestSellerItemPage.clickOndeleteItemfromWishListBtn();
+		bestSellerItemPage.addBestSellerBookToWishList();
+		bestSellerItemPage.addBestSellerBatToWishList();
 }
 }
 
