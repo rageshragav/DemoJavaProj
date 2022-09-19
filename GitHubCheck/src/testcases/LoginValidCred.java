@@ -3,6 +3,7 @@
  */
 package testcases;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -40,5 +41,9 @@ public class LoginValidCred extends BaseClass{
 		extentTest.log(Status.PASS, "login successfull");
 		extentTest.pass("user login successfull");
 		
+	}
+	@AfterClass
+	public void tearDown() {
+		driver.quit();
 	}
 }

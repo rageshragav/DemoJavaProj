@@ -64,9 +64,9 @@ public class BaseClass {
 		}
 	}
 	
-	@AfterTest
+	/*@AfterTest
 	public void flushExtent() {
 		driver.quit();
 		//extent.flush();
-	}
+	}*/
 }

@@ -4,28 +4,25 @@
 <listeners>
 <listener class-name="utils.Listners"/>
 </listeners>
-
-<test name="Amazon Regression test run">
-    <classes>
-         	    <class name="testcases.LoginValidCred"/>
-         	    <class name="testcases.ViewOrders"/>
-                <class name="testcases.AddItemToCart"/>
-                <class name="testcases.AddBestSellerItemToWishList"/>
-               
-                
-    </classes>
-    
-    </test>
-    
-    <test name="Add item to cart">
-    <classes>
-         	    
-                <class name="testcases.AddItemToCart"/>
-            <!--    <class name="testcases.AddBestSellerItemToWishList"/>
-                <class name="testcases.ViewOrders"/> -->
-                
-    </classes>
-    
-    </test>
+<test name="Login">
+	 <classes>
+	   <class name="testcases.LoginValidCred"/>
+	 </classes>
+   </test>
+   <test name="viewOrder">
+	 <classes>
+	   <class name="testcases.ViewOrders"/>
+	 </classes>
+   </test>
+   <test name="addToCart">
+	 <classes>
+	   <class name="testcases.AddItemToCart"/>
+	 </classes>
+   </test>
+   <test name="addToWishlist">
+	 <classes>
+	     <class name="testcases.AddBestSellerItemToWishList"/>
+	 </classes>
+   </test>
 </suite>
 <!-- Suite -->
