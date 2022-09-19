@@ -15,5 +15,16 @@
     </classes>
     
     </test>
+    
+    <test name="Add item to cart">
+    <classes>
+         	    
+                <class name="testcases.AddItemToCart"/>
+            <!--    <class name="testcases.AddBestSellerItemToWishList"/>
+                <class name="testcases.ViewOrders"/> -->
+                
+    </classes>
+    
+    </test>
 </suite>
 <!-- Suite -->
