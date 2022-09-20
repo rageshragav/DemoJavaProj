@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Parent_Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utils.Listners"/>
+  </listeners>
+  <test thread-count="5" name="addToWishlist(failed)">
     <classes>
-      <class name="testcases.AddHomeImprovementItemsToWishList">
+      <class name="testcases.AddBestSellerItemToWishList">
         <methods>
+          <include name="BestSellerBook"/>
           <include name="createPOMObject"/>
-          <include name="flushExtent"/>
           <include name="launchBrowser"/>
-          <include name="addHomeImprovementsToWishList"/>
         </methods>
-      </class> <!-- testcases.AddHomeImprovementItemsToWishList -->
+      </class> <!-- testcases.AddBestSellerItemToWishList -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- addToWishlist(failed) -->
+</suite> <!-- Failed suite [Parent_Suite] -->
