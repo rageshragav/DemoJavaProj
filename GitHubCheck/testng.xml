@@ -24,5 +24,10 @@
 	     <class name="testcases.AddBestSellerItemToWishList"/>
 	 </classes>
    </test>
+   <test name="addHomeImprovementToWishlist">
+	 <classes>
+	     <class name="testcases.AddHomeImprovementItemsToWishList"/>
+	 </classes>
+   </test>
 </suite>
 <!-- Suite -->
