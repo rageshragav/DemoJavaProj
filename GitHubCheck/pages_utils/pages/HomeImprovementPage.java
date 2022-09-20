@@ -35,6 +35,8 @@ public class HomeImprovementPage {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
+	
+	
 	@FindBy(xpath = "//a[contains(text(),'Home Improvement')]")
 	private WebElement homeImprovementMenu;
 
