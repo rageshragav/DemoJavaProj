@@ -42,7 +42,7 @@ public class LoginValidCred extends BaseClass{
 		extentTest.pass("user login successfull");
 		
 	}
-	@AfterClass
+	//@AfterClass
 	public void tearDown() {
 		driver.quit();
 	}

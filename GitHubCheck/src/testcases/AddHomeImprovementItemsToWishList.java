@@ -8,6 +8,8 @@ import java.io.IOException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 import base.BaseClass;
 import pages.BestSellerItemPage;
 import pages.HomeImprovementPage;
@@ -40,9 +42,18 @@ public class AddHomeImprovementItemsToWishList extends BaseClass {
 
 	@Test(priority = 2)
 	public void addHomeImprovementsToWishList() throws IOException, InterruptedException {
+		extentTest = extent.createTest("Adding home improvement item to wishlist and from wishlist to cart ");
 
 		homeImprovementPage.selectHomeImprovementItem();
-		
+		homeImprovementPage.addBroomToWishList();
+		homeImprovementPage.viewWishList();
+		if (homeImprovementPage.isWishListWithBroomAdded()) {
+			extentTest.log(Status.PASS, "Item added to wishlist successfully");
+		}else {
+			extentTest.log(Status.FAIL, "Item not added to wishlist successfully");
+		}
+		homeImprovementPage.addToCartViaWishList();
+		homeImprovementPage.proceedToCheckoutFromWishList();
 
 	}
 

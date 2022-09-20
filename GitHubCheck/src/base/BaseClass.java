@@ -39,8 +39,8 @@ public class BaseClass {
 	@BeforeTest
 	public void launchBrowser() {
 
-		 extent = new ExtentReports();
-		 spark = new ExtentSparkReporter("Extentreport.html");
+		extent = new ExtentReports();
+		spark = new ExtentSparkReporter("Extentreport.html");
 		extent.attachReporter(spark);
 		spark.config().setReportName("Amzon web test results");
 		spark.config().setDocumentTitle("Test results");
@@ -64,9 +64,9 @@ public class BaseClass {
 		}
 	}
 	
-	/*@AfterTest
+	@AfterTest
 	public void flushExtent() {
 		driver.quit();
-		//extent.flush();
-	}*/
+		extent.flush();
+	}
 }
