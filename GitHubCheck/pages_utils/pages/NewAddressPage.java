@@ -41,10 +41,9 @@ public class NewAddressPage {
 
 	@FindBy(xpath = "//span[@id='address-ui-widgets-form-submit-button']")
 	private WebElement addAddressBtn;
-	
+
 	@FindBy(xpath = "//span[@id='a-autoid-2")
 	private WebElement saveAddressBtn;
-
 
 	private WebDriver driver;
 	private WebDriverWait wait;
@@ -53,6 +52,7 @@ public class NewAddressPage {
 	public NewAddressPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
 	public void clickOnCustomerProfile() {
@@ -71,54 +71,54 @@ public class NewAddressPage {
 	}
 
 	public void enterCustomerName(String NameOfCustomer) {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
 		wait.until(ExpectedConditions.visibilityOf(customerName));
 		customerName.clear();
 		customerName.sendKeys(NameOfCustomer);
 	}
 
 	public void fillMobileNumber(String mobileNum) {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
 		wait.until(ExpectedConditions.visibilityOf(mobileNumber));
 		mobileNumber.clear();
 		mobileNumber.sendKeys(mobileNum);
 	}
 
 	public void fillPinCode(String pin) {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
 		wait.until(ExpectedConditions.visibilityOf(pinCode));
 		pinCode.clear();
 		pinCode.sendKeys(pin);
 	}
 
 	public void fillFlat(String flatName) {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
 		wait.until(ExpectedConditions.visibilityOf(flat));
 		flat.clear();
 		flat.sendKeys(flatName);
 	}
 
 	public void fillArea(String areaName) {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
 		wait.until(ExpectedConditions.visibilityOf(area));
 		area.clear();
 		area.sendKeys(areaName);
 	}
 
 	public void fillLandmark(String landmarkName) {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
 		wait.until(ExpectedConditions.visibilityOf(landmark));
 		landmark.clear();
 		landmark.sendKeys(landmarkName);
 	}
 
 	public void clickOnAddAdressButton() {
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
 		wait.until(ExpectedConditions.elementToBeClickable(addAddressBtn));
 		addAddressBtn.click();
-		
+
 	}
-	
+
 	public boolean saveAddressButtonVisiblity() {
 		try {
 			wait = new WebDriverWait(driver, Duration.ofSeconds(10));

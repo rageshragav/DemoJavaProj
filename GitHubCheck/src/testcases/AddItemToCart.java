@@ -14,6 +14,7 @@ import pages.LoginPage;
 import pages.NewAddressPage;
 import pages.ProductDetailsPage;
 import pages.ShoppingCartPage;
+import utils.Log;
 import utils.Utility;
 
 /**
@@ -48,7 +49,7 @@ public class AddItemToCart extends BaseClass {
 
 	@Test(priority = 2)
 	public void searchItemAndAddToCart() throws InterruptedException {
-		extentTest = extent.createTest("Add item to cart");
+		extentTest = extent.createTest("Search and Add item to cart");
 		homepage.searchItem(properties.getProperty("product"));
 		homepage.clickOnSearchIcon();
 		homepage.clickOnSearchResult();
@@ -56,10 +57,12 @@ public class AddItemToCart extends BaseClass {
 		productDetPage.addItemToCart();
 
 		if (shoppingCartPage.isProductInCart()) {
-			extentTest.log(Status.PASS, "Product " + properties.getProperty("product") + " added to the cart successfully");
+			extentTest.log(Status.PASS, "Product " + properties.getProperty("product") + " added to the cart successfully",Utility.captureScreenShot(driver));
+			Log.info("Item Added in the the cart successfully");
 
 		} else {
-			extentTest.log(Status.FAIL, "Product " + properties.getProperty("product") + " is not in the cart ");
+			extentTest.log(Status.FAIL, "Product " + properties.getProperty("product") + " is not in the cart ",Utility.captureScreenShot(driver));
+			Log.error("Item not added in the cart successfully");
 		}
 
 	}

@@ -14,6 +14,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utils.Log;
+
 /**
  * @author ragesh
  *
@@ -42,11 +44,17 @@ public class ProductDetailsPage {
 	private WebElement proceedToCheckout;
 	
 	public void addItemToCart() {
-		
+		try {
 		wait.until(ExpectedConditions.visibilityOf(searchProductTitle));
 		addToCartButton.click();
+		Log.info("Adding the product to cart");
 		
 		wait.until(ExpectedConditions.visibilityOf(proceedToCheckout));
 		driver.navigate().to("https://www.amazon.in/gp/cart/view.html?ref_=nav_cart");
+		Log.info("Navigating to cart");}
+		catch (Exception e) {
+			// TODO: handle exception
+			Log.error("Error while adding item to the cart "+e);
+		}
 	}
 }

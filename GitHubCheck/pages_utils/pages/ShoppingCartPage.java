@@ -28,7 +28,7 @@ public class ShoppingCartPage {
 
 	}
 
-	@FindBy(xpath = "//h1[contains(text(),'Shopping Cart')]//following::li//span[text()='Apple iPhone 12 (64GB) - Blue']")
+	@FindBy(xpath = "//h1[contains(text(),'Shopping Cart')]//following::li//span[text()='Apple iPhone 12 (128GB) - Green']")
 	private WebElement productInCart;
 
 	public boolean isProductInCart() {

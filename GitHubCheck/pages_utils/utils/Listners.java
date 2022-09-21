@@ -32,14 +32,13 @@ public class Listners extends BaseClass implements ITestListener{
     @Override		
     public void onTestSuccess(ITestResult Result)					
     {		
-    test.log(Status.PASS, "Test Passed");
+    test.log(Status.PASS, "Test Passed",Utility.captureScreenShot(driver));
+    
     }	
 	@Override		
     public void onTestFailure(ITestResult Result) 					
     {		
 		test.fail(Result.getThrowable());
-		
-		
     }		
 
   

@@ -3,8 +3,11 @@
  */
 package pages;
 
+import static org.testng.Assert.assertTrue;
+
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -16,6 +19,7 @@ import org.testng.Assert;
 
 import com.beust.jcommander.internal.Console;
 
+import utils.Log;
 import utils.Utility;
 
 /**
@@ -35,8 +39,6 @@ public class HomeImprovementPage {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
-	
-	
 	@FindBy(xpath = "//a[contains(text(),'Home Improvement')]")
 	private WebElement homeImprovementMenu;
 
@@ -73,17 +75,33 @@ public class HomeImprovementPage {
 	@FindBy(xpath = "//span[contains(text(),'Proceed to checkout')]")
 	private WebElement proceedToCheckOut;
 
+	@FindBy(xpath = "//span[@class='a-declarative']//input[@value='Delete']")
+	private WebElement deleteButton;
+
+	@FindBy(xpath = "//h1[contains(text(),'Your Amazon Cart is empty.')]")
+	private WebElement emptyCartMessage;
+
+	public WebElement itemInCart() {
+		return driver.findElement(By.xpath("//span[@class='a-list-item']//a//span[1]//span[1][contains(text(),'"+itemName+"'"));
+	}
 	public void selectHomeImprovementItem() {
 		if (isHomeImprovemntsVisisble()) {
 			wait.until(ExpectedConditions.visibilityOf(homeImprovementMenu)).click();
+			Log.info("Made a click in home improvements in home page container");
 		} else {
 			driver.get("https://www.amazon.in/gp/browse.html?node=3704992031&ref_=nav_cs_hi");
+			Log.info("Since home improvements menu item not visible, navigating to home improvements page");
 		}
 		wait.until(ExpectedConditions.visibilityOf(cleaningSuppliesDepartment)).click();
+		Log.info("Made a click in side menu cleaning supplies");
 		wait.until(ExpectedConditions.visibilityOf(broomsMenuItem)).click();
+		Log.info("Made a click in Brooms categories in home improvements ");
 		wait.until(ExpectedConditions.visibilityOf(brandScotchBrite)).click();
+		Log.info("Filtered brand as scotch-brite");
 		getItemNameFromResult();
+		Log.info("Getting the name of the item selecting from the search result");
 		wait.until(ExpectedConditions.visibilityOf(firstItemFromResult)).click();
+		Log.info("Clicking on item from the result");
 		Utility.switchToNewWindow(driver);
 		// wait.until(ExpectedConditions.visibilityOf(addToWishListbtn)).click();
 		// wait.until(ExpectedConditions.visibilityOf(viewWishList)).click();
@@ -104,20 +122,30 @@ public class HomeImprovementPage {
 
 	public void addBroomToWishList() {
 		wait.until(ExpectedConditions.visibilityOf(addToWishListbtn)).click();
+		Log.info("Moving the selected item to wishlist");
 	}
 
 	public void viewWishList() {
 
 		wait.until(ExpectedConditions.visibilityOf(viewWishList)).click();
+		Log.info("Viewing the selected item in wishlist page");
 		getItemNameFromWishList();
 	}
 
 	public void addToCartViaWishList() {
 		wait.until(ExpectedConditions.visibilityOf(addToCartFromWishList)).click();
+		Log.info("Moving the item from wishlist to cart");
 	}
 
 	public void proceedToCheckoutFromWishList() {
 		wait.until(ExpectedConditions.visibilityOf(proceedToCheckOut)).click();
+		Log.info("proceeding to checkout the item from cart");
+	}
+
+	public void deleteItemFromCart() {
+		driver.get("https://www.amazon.in/gp/cart/view.html?ref_=nav_cart");
+		wait.until(ExpectedConditions.visibilityOf(deleteButton)).click();
+		Log.info("Deleting item from the cart");
 	}
 
 	public Boolean isHomeImprovemntsVisisble() {
@@ -137,6 +165,17 @@ public class HomeImprovementPage {
 			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
+			return false;
+		}
+	}
+
+	public Boolean isItemDeleted() {
+		try {
+			wait.until(ExpectedConditions.visibilityOf(emptyCartMessage));
+			return true;
+		} catch (Exception e) {
+			// TODO: handle exception
+
 			return false;
 		}
 	}

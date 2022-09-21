@@ -58,6 +58,6 @@ public class LoginPage
 	   sendPassward(passWord);
 	   Log.info(passWord +" filled in password field");
 	   login.click();
-	   Log.info(" MAde click on login button");
+	   Log.info(" Made click on login button");
    }
 }
