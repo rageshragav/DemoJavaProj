@@ -5,10 +5,13 @@ import java.io.IOException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 import base.BaseClass;
 import pages.BestSellerItemPage;
 import pages.LoginPage;
 import pages.ViewOrdersPage;
+import utils.Utility;
 
 public class ViewOrders extends BaseClass {
 	public BestSellerItemPage bestSellerItemPage;
@@ -37,9 +40,11 @@ public class ViewOrders extends BaseClass {
 
 	@Test(priority = 2)
 	public void ViewOrdersPage() {
+		extentTest = extent.createTest("View all Orders");
 		viewOrdersPage.clickOnOrderBox();
 		viewOrdersPage.clickOnbuyAgain();
 		viewOrdersPage.clickOnnotYetShipped();
 		viewOrdersPage.clickOncancelledOrders();
+		extentTest.log(Status.PASS, "Orders displayed successfully",Utility.captureScreenShot(driver));
 	}	
 }

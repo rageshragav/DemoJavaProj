@@ -3,14 +3,26 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="testcases.AddItemToCart">
+=======
+      <class name="testcases.AddBestSellerItemToWishList">
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj.git
         <methods>
+<<<<<<< HEAD
+=======
+          <include name="BestSellerBook"/>
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj.git
           <include name="flushExtent"/>
           <include name="createPOMObject"/>
           <include name="searchItemAndAddToCart"/>
           <include name="launchBrowser"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- testcases.AddItemToCart -->
+=======
+      </class> <!-- testcases.AddBestSellerItemToWishList -->
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj.git
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
