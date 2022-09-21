@@ -2,6 +2,7 @@ package pages;
 
 import java.time.Duration;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +11,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
 
 public class BestSellerItemPage {
 
@@ -36,6 +39,10 @@ public class BestSellerItemPage {
 
 	@FindBy(xpath = " //*[@id=\"huc-view-your-list-button\"]/span/a")
 	private WebElement viewWishListBtn;
+	
+	@FindBy(xpath = "(//div[@class='a-row']//following::div//h2//a)[1]")
+	private WebElement nameOfTheitemInWishList;
+
 
 	@FindBy(xpath = " //input[@name='submit.deleteItem']")
 	private WebElement deleteItemfromWishList;
@@ -85,6 +92,8 @@ public class BestSellerItemPage {
 	private WebDriver driver;
 	private WebDriverWait wait;
 	private Actions actions;
+	public String itemName;
+	public String itemNameInWishList;
 
 	public BestSellerItemPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -145,4 +154,21 @@ public class BestSellerItemPage {
 		viewWishListBtn.click();
         deleteItemfromWishList.click();
 	}
+	
+
+	public String getItemNameFromWishList() {
+
+		itemNameInWishList = wait.until(ExpectedConditions.visibilityOf(nameOfTheitemInWishList)).getText();
+		return itemNameInWishList;
+	}
+	public Boolean isWishListWithwarOfLankaAdded() {
+		try {
+			Assert.assertEquals(itemName, itemNameInWishList);
+			return true;
+		} catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+		
+}
 }
