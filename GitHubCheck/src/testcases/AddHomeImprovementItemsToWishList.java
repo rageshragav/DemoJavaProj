@@ -14,6 +14,7 @@ import base.BaseClass;
 import pages.BestSellerItemPage;
 import pages.HomeImprovementPage;
 import pages.LoginPage;
+import utils.Utility;
 
 /**
  * @author ragesh
@@ -48,9 +49,10 @@ public class AddHomeImprovementItemsToWishList extends BaseClass {
 		homeImprovementPage.addBroomToWishList();
 		homeImprovementPage.viewWishList();
 		if (homeImprovementPage.isWishListWithBroomAdded()) {
-			extentTest.log(Status.PASS, "Item added to wishlist successfully");
-		}else {
-			extentTest.log(Status.FAIL, "Item not added to wishlist successfully");
+			extentTest.log(Status.PASS, "Item added to wishlist successfully",Utility.captureScreenShot(driver));
+			
+		} else {
+			extentTest.log(Status.FAIL, "Item not added to wishlist successfully",Utility.captureScreenShot(driver));
 		}
 		homeImprovementPage.addToCartViaWishList();
 		homeImprovementPage.proceedToCheckoutFromWishList();

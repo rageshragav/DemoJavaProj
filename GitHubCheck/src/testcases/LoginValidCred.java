@@ -14,6 +14,7 @@ import base.BaseClass;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.NewAddressPage;
+import utils.Utility;
 
 /**
  * @author ragesh
@@ -38,7 +39,9 @@ public class LoginValidCred extends BaseClass{
 	public void loginWithValidCredentails() {
 		extentTest = extent.createTest("Valid login test");
 		loginpg.loginToAmazon(properties.getProperty("user"), properties.getProperty("password"));
-		extentTest.log(Status.PASS, "login successfull");
+		
+		//extentTest.log(Status.PASS, "login successfull");
+		extentTest.log(Status.PASS, "login successfull",Utility.captureScreenShot(driver));
 		extentTest.pass("user login successfull");
 		
 	}

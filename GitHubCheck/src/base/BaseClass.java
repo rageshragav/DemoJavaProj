@@ -4,9 +4,12 @@
 package base;
 
 import java.io.FileInputStream;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
@@ -18,6 +21,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import utils.Log;
+import utils.Utility;
 
 /**
  * @author ragesh
@@ -35,6 +40,7 @@ public class BaseClass {
 	/**
 	 * @param args
 	 */
+	
 
 	@BeforeTest
 	public void launchBrowser() {
@@ -46,8 +52,10 @@ public class BaseClass {
 		spark.config().setDocumentTitle("Test results");
 		extent.setSystemInfo("Ragesh", "Technical engineer");
 		driver = WebDriverManager.chromedriver().create();
+		Log.info("Browser launched");
 		driver.manage().window().maximize();
 		driver.get(properties.getProperty("url"));
+		Log.info(properties.getProperty("url")+ " Loaded");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 	}

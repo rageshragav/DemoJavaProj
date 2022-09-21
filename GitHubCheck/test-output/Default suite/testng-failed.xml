@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.AddHomeImprovementItemsToWishList">
+      <class name="testcases.LoginValidCred">
         <methods>
-          <include name="createPOMObject"/>
+          <include name="loginWithValidCredentails"/>
           <include name="flushExtent"/>
+          <include name="createPOMObject"/>
           <include name="launchBrowser"/>
-          <include name="addHomeImprovementsToWishList"/>
         </methods>
-      </class> <!-- testcases.AddHomeImprovementItemsToWishList -->
+      </class> <!-- testcases.LoginValidCred -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

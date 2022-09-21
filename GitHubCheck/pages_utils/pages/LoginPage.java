@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utils.Log;
+
 public class LoginPage 
 {
 	@FindBy (xpath = "//input[@id='ap_email']")
@@ -51,8 +53,11 @@ public class LoginPage
    
    public void loginToAmazon(String userName,String passWord) {
 	   sendUserName(userName);
+	   Log.info(userName +" filled in username field");
 	   continueButton.click();
 	   sendPassward(passWord);
+	   Log.info(passWord +" filled in password field");
 	   login.click();
+	   Log.info(" MAde click on login button");
    }
 }
