@@ -47,48 +47,6 @@ public class BestSellerItemPage {
 	@FindBy(xpath = " //input[@name='submit.deleteItem']")
 	private WebElement deleteItemfromWishList;
 
-	@FindBy(xpath = " (//a[text()='Sports, Fitness & Outdoors'])[2]")
-	private WebElement sportsFitneesOutdoors;
-
-	@FindBy(xpath = " //a[text()='Cricket']")
-	private WebElement cricket;
-
-	@FindBy(xpath = " //a[text()='Bats']")
-	private WebElement bats;
-
-	@FindBy(xpath = " //a[text()='Kashmir Willow']")
-	private WebElement kashmirWillow;
-
-	@FindBy(xpath = " //div[contains(text(),'DSC Belter Wood Kashmir Willow Cricket Bat Short Handle Mens (Multicolour)')]")
-	private WebElement dscbat;
-
-	@FindBy(xpath = " //span[text()=' Price ']")
-	private WebElement pricebtn;
-
-	@FindBy(xpath = "//span[@class='refinement-row sbl-refinement-option-button sbl-refinement-price-3']/span")
-	private WebElement selectPrice;
-
-	@FindBy(xpath = " //span[text()=' Review ']")
-	private WebElement reviewbtn;
-
-	@FindBy(xpath = " (//span[@class='sbl-review-item'and text()=' & Up '])[1]")
-	private WebElement selectReview;
-
-	@FindBy(xpath = " //span[text()=' Cricket Bat Size ']")
-	private WebElement batSizebtn;
-
-	@FindBy(xpath = " //span[@class='shopbylook-btf-clickable'and text()='5']")
-	private WebElement selectBatSize;
-
-	@FindBy(xpath = " //span[ text()=' Brand ']")
-	private WebElement brandbtn;
-
-	@FindBy(xpath = " //span[ @class='shopbylook-btf-clickable'and text()='SG']")
-	private WebElement selectBrand;
-
-	@FindBy(xpath = "//div[contains(@class,'a-image-container a-dynamic-image-container shopbylook-btf-image-container')]")
-	private WebElement sgBat;
-
 	private WebDriver driver;
 	private WebDriverWait wait;
 	private Actions actions;
@@ -109,45 +67,6 @@ public class BestSellerItemPage {
 		warOfLanka.click();
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(addToWishListbtn));
-		addToWishListbtn.click();
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(viewWishListBtn));
-		viewWishListBtn.click();
-        deleteItemfromWishList.click();
-	}
-
-	public void addBestSellerBatToWishList() throws InterruptedException {
-		bestSeller.click();
-		sportsFitneesOutdoors.click();
-		cricket.click();
-		bats.click();
-		kashmirWillow.click();
-		dscbat.click();
-		pricebtn.click();
-		selectPrice.click();
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(reviewbtn));
-		reviewbtn.click();
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(selectReview));
-		selectReview.click();
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(batSizebtn));
-		batSizebtn.click();
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(selectBatSize));
-		selectBatSize.click();
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(brandbtn));
-		brandbtn.click();
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(selectBrand));
-		selectBrand.click();
-		Thread.sleep(5000);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(sgBat));
-		// driver.navigate().to("https://www.amazon.in/dp/B00IDALQRU/ref=sbl_dpx_in-sports-cricket-bats_B08J7FRFY8_0?th=1&psc=1");
-		sgBat.click();
 		addToWishListbtn.click();
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(viewWishListBtn));

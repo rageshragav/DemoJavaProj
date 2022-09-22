@@ -45,9 +45,7 @@ public class AddBestSellerItemToWishList extends BaseClass {
 		} else {
 			extentTest.log(Status.FAIL, "Item not added to wishlist successfully",Utility.captureScreenShot(driver));
 		}
-		bestSellerItemPage.addBestSellerBatToWishList();
+		
 		
 }
 }
-
-
