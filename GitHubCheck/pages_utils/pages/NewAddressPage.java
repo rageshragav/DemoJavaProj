@@ -42,7 +42,7 @@ public class NewAddressPage {
 	@FindBy(xpath = "//span[@id='address-ui-widgets-form-submit-button']")
 	private WebElement addAddressBtn;
 
-	@FindBy(xpath = "//span[@id='a-autoid-2")
+	@FindBy(xpath = "//span[@class='a-button-inner']//input//span[contains(text(),'Save Address')]")
 	private WebElement saveAddressBtn;
 
 	private WebDriver driver;
@@ -116,6 +116,13 @@ public class NewAddressPage {
 
 		wait.until(ExpectedConditions.elementToBeClickable(addAddressBtn));
 		addAddressBtn.click();
+
+	}
+	
+	public void clickOnSaveAdressButton() {
+
+		wait.until(ExpectedConditions.elementToBeClickable(saveAddressBtn));
+		saveAddressBtn.click();
 
 	}
 

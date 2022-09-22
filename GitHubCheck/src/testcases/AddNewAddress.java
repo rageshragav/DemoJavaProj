@@ -76,6 +76,7 @@ public class AddNewAddress extends BaseClass {
 		newAddressPage.fillLandmark(landmark);
 		Utility.javaScriptExecuterScrollDownPage(driver, 200);
 		newAddressPage.clickOnAddAdressButton();
+		newAddressPage.clickOnSaveAdressButton();
 		
 		driver.get("https://www.amazon.in/a/addresses?ref_=ya_d_c_addr");
 

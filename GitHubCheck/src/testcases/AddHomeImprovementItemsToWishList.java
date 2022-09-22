@@ -26,6 +26,8 @@ public class AddHomeImprovementItemsToWishList extends BaseClass {
 	public HomeImprovementPage homeImprovementPage;
 	public LoginPage loginPage;
 	public BestSellerItemPage bestSellerItemPage;
+	public String className = this.getClass().getSimpleName();
+	
 
 	@BeforeClass
 	public void createPOMObject() {
@@ -47,27 +49,28 @@ public class AddHomeImprovementItemsToWishList extends BaseClass {
 		extentTest = extent.createTest("Adding home improvement item to wishlist and moving from wishlist to cart ");
 
 		homeImprovementPage.selectHomeImprovementItem();
-		
+
 		homeImprovementPage.addBroomToWishList();
 		homeImprovementPage.viewWishList();
 		if (homeImprovementPage.isWishListWithBroomAdded()) {
-			extentTest.log(Status.PASS, "Item added to wishlist successfully",Utility.captureScreenShot(driver));
-			Log.info("Item moved to wishlist successfully");
-			
+			extentTest.log(Status.PASS, "Item added to wishlist successfully", Utility.captureScreenShot(driver));
+			Log.info("Item moved to wishlist successfully",className);
+
 		} else {
-			extentTest.log(Status.FAIL, "Item not added to wishlist successfully",Utility.captureScreenShot(driver));
-			Log.error("Item not moved to wishlist successfully");
+			extentTest.log(Status.FAIL, "Item not added to wishlist successfully", Utility.captureScreenShot(driver));
+			Log.error("Item not moved to wishlist successfully",className);
 		}
 		homeImprovementPage.addToCartViaWishList();
 		homeImprovementPage.proceedToCheckoutFromWishList();
 		homeImprovementPage.deleteItemFromCart();
-		
-		if(homeImprovementPage.isItemDeleted()) {
-			extentTest.log(Status.PASS, "Item deleted from the cart successfully",Utility.captureScreenShot(driver));
-			Log.info("Item deleted from the cart successfully");
-		}else {
-			extentTest.log(Status.FAIL, "Item not deleted from the cart successfully",Utility.captureScreenShot(driver));
-			Log.error("Item not deleted from the cart successfully");
+
+		if (homeImprovementPage.isItemDeleted()) {
+			extentTest.log(Status.PASS, "Item deleted from the cart successfully", Utility.captureScreenShot(driver));
+			Log.info("Item deleted from the cart successfully",className);
+		} else {
+			extentTest.log(Status.FAIL, "Item not deleted from the cart successfully",
+					Utility.captureScreenShot(driver));
+			Log.error("Item not deleted from the cart successfully",className);
 		}
 
 	}

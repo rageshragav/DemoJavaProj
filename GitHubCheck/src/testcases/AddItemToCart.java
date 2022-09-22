@@ -28,7 +28,7 @@ public class AddItemToCart extends BaseClass {
 	public ProductDetailsPage productDetPage;
 	public ShoppingCartPage shoppingCartPage;
 	//public static String product = properties.getProperty("product");
-
+	public String className = this.getClass().getSimpleName();
 	@BeforeClass
 	public void createPOMObject() {
 
@@ -58,11 +58,11 @@ public class AddItemToCart extends BaseClass {
 
 		if (shoppingCartPage.isProductInCart()) {
 			extentTest.log(Status.PASS, "Product " + properties.getProperty("product") + " added to the cart successfully",Utility.captureScreenShot(driver));
-			Log.info("Item Added in the the cart successfully");
+			Log.info("Item Added in the the cart successfully",className);
 
 		} else {
 			extentTest.log(Status.FAIL, "Product " + properties.getProperty("product") + " is not in the cart ",Utility.captureScreenShot(driver));
-			Log.error("Item not added in the cart successfully");
+			Log.error("Item not added in the cart successfully",className);
 		}
 
 	}

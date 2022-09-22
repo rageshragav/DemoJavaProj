@@ -32,7 +32,7 @@ public class HomeImprovementPage {
 	public WebDriverWait wait;
 	public String itemName;
 	public String itemNameInWishList;
-
+	public String className = this.getClass().getSimpleName();
 	public HomeImprovementPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
@@ -87,21 +87,21 @@ public class HomeImprovementPage {
 	public void selectHomeImprovementItem() {
 		if (isHomeImprovemntsVisisble()) {
 			wait.until(ExpectedConditions.visibilityOf(homeImprovementMenu)).click();
-			Log.info("Made a click in home improvements in home page container");
+			Log.info("Made a click in home improvements in home page container",className);
 		} else {
 			driver.get("https://www.amazon.in/gp/browse.html?node=3704992031&ref_=nav_cs_hi");
-			Log.info("Since home improvements menu item not visible, navigating to home improvements page");
+			Log.info("Since home improvements menu item not visible, navigating to home improvements page",className);
 		}
 		wait.until(ExpectedConditions.visibilityOf(cleaningSuppliesDepartment)).click();
-		Log.info("Made a click in side menu cleaning supplies");
+		Log.info("Made a click in side menu cleaning supplies",className);
 		wait.until(ExpectedConditions.visibilityOf(broomsMenuItem)).click();
-		Log.info("Made a click in Brooms categories in home improvements ");
+		Log.info("Made a click in Brooms categories in home improvements ",className);
 		wait.until(ExpectedConditions.visibilityOf(brandScotchBrite)).click();
-		Log.info("Filtered brand as scotch-brite");
+		Log.info("Filtered brand as scotch-brite",className);
 		getItemNameFromResult();
-		Log.info("Getting the name of the item selecting from the search result");
+		Log.info("Getting the name of the item selecting from the search result",className);
 		wait.until(ExpectedConditions.visibilityOf(firstItemFromResult)).click();
-		Log.info("Clicking on item from the result");
+		Log.info("Clicking on item from the result",className);
 		Utility.switchToNewWindow(driver);
 		// wait.until(ExpectedConditions.visibilityOf(addToWishListbtn)).click();
 		// wait.until(ExpectedConditions.visibilityOf(viewWishList)).click();
@@ -122,30 +122,30 @@ public class HomeImprovementPage {
 
 	public void addBroomToWishList() {
 		wait.until(ExpectedConditions.visibilityOf(addToWishListbtn)).click();
-		Log.info("Moving the selected item to wishlist");
+		Log.info("Moving the selected item to wishlist",className);
 	}
 
 	public void viewWishList() {
 
 		wait.until(ExpectedConditions.visibilityOf(viewWishList)).click();
-		Log.info("Viewing the selected item in wishlist page");
+		Log.info("Viewing the selected item in wishlist page",className);
 		getItemNameFromWishList();
 	}
 
 	public void addToCartViaWishList() {
 		wait.until(ExpectedConditions.visibilityOf(addToCartFromWishList)).click();
-		Log.info("Moving the item from wishlist to cart");
+		Log.info("Moving the item from wishlist to cart",className);
 	}
 
 	public void proceedToCheckoutFromWishList() {
 		wait.until(ExpectedConditions.visibilityOf(proceedToCheckOut)).click();
-		Log.info("proceeding to checkout the item from cart");
+		Log.info("proceeding to checkout the item from cart",className);
 	}
 
 	public void deleteItemFromCart() {
 		driver.get("https://www.amazon.in/gp/cart/view.html?ref_=nav_cart");
 		wait.until(ExpectedConditions.visibilityOf(deleteButton)).click();
-		Log.info("Deleting item from the cart");
+		Log.info("Deleting item from the cart",className);
 	}
 
 	public Boolean isHomeImprovemntsVisisble() {

@@ -9,6 +9,8 @@ import utils.Log;
 
 public class LoginPage 
 {
+	
+	String className = this.getClass().getSimpleName();
 	@FindBy (xpath = "//input[@id='ap_email']")
 	private WebElement userId;
 	
@@ -53,11 +55,11 @@ public class LoginPage
    
    public void loginToAmazon(String userName,String passWord) {
 	   sendUserName(userName);
-	   Log.info(userName +" filled in username field");
+	   Log.info(userName +" filled in username field",className);
 	   continueButton.click();
 	   sendPassward(passWord);
-	   Log.info(passWord +" filled in password field");
+	   Log.info(passWord +" filled in password field",className);
 	   login.click();
-	   Log.info(" Made click on login button");
+	   Log.info(" Made click on login button",className);
    }
 }

@@ -43,7 +43,7 @@ public class HomePage {
 	private WebDriver driver;
 	private WebDriverWait wait;
 	private Actions actions;
-
+	public String className = this.getClass().getSimpleName();
 	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
@@ -55,17 +55,17 @@ public class HomePage {
 		wait.until(ExpectedConditions.visibilityOf(searchBar));
 		searchBar.clear();
 		searchBar.sendKeys(itemToSearch);
-		Log.info("Searching for the item " + itemToSearch);
+		Log.info("Searching for the item " + itemToSearch,className);
 	}
 
 	public void clickOnSearchIcon() {
 		try {
 		wait.until(ExpectedConditions.visibilityOf(searchIcon));
 		searchIcon.click();
-		Log.info("Made a click on search icon");}
+		Log.info("Made a click on search icon",className);}
 		catch (Exception e) {
 			// TODO: handle exception
-			Log.error("Error while clicking on the search icon");
+			Log.error("Error while clicking on the search icon",className);
 		}
 	}
 
@@ -73,10 +73,10 @@ public class HomePage {
 		try {
 		wait.until(ExpectedConditions.visibilityOf(searchResult));
 		searchResult.click();
-		Log.info("Clickig on the required item from the search result");}
+		Log.info("Clickig on the required item from the search result",className);}
 		catch (Exception e) {
 			// TODO: handle exception
-			Log.error("Error while clicking on the search result " +e);
+			Log.error("Error while clicking on the search result " +e,className);
 		}
 	}
 

@@ -24,7 +24,7 @@ public class ProductDetailsPage {
 
 	public WebDriver driver;
 	public WebDriverWait wait;
-	
+	public String className = this.getClass().getSimpleName();
 	
 	public ProductDetailsPage(WebDriver driver)
 	{
@@ -47,14 +47,14 @@ public class ProductDetailsPage {
 		try {
 		wait.until(ExpectedConditions.visibilityOf(searchProductTitle));
 		addToCartButton.click();
-		Log.info("Adding the product to cart");
+		Log.info("Adding the product to cart",className);
 		
 		wait.until(ExpectedConditions.visibilityOf(proceedToCheckout));
 		driver.navigate().to("https://www.amazon.in/gp/cart/view.html?ref_=nav_cart");
-		Log.info("Navigating to cart");}
+		Log.info("Navigating to cart",className);}
 		catch (Exception e) {
 			// TODO: handle exception
-			Log.error("Error while adding item to the cart "+e);
+			Log.error("Error while adding item to the cart "+e,className);
 		}
 	}
 }

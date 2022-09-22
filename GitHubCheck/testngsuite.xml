@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
+
+<suite thread-count="1" verbose="1" name="Amazon Automation Suite" annotations="JDK" parallel="tests">
+         
+  <test name="Login Tests">
+	 <classes>
+	   <class name="testcases.LoginValidCred"/>
+	 </classes>
+   </test>
+   
+  <test name="Myntra">
+     <classes>
+       <class name="testcases.AddHomeImprovementItemsToWishList"/>
+     </classes>
+   </test>
+</suite>
