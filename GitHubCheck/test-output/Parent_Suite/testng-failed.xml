@@ -4,28 +4,17 @@
   <listeners>
     <listener class-name="utils.Listners"/>
   </listeners>
-  <test thread-count="5" name="addToCart(failed)">
+  <test thread-count="5" name="addHomeImprovementToWishlist(failed)">
     <classes>
-      <class name="testcases.AddItemToCart">
+      <class name="testcases.AddHomeImprovementItemsToWishList">
         <methods>
-          <include name="flushExtent"/>
           <include name="createPOMObject"/>
-          <include name="searchItemAndAddToCart"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- testcases.AddItemToCart -->
-    </classes>
-  </test> <!-- addToCart(failed) -->
-  <test thread-count="5" name="addToWishlist(failed)">
-    <classes>
-      <class name="testcases.AddBestSellerItemToWishList">
-        <methods>
-          <include name="BestSellerBook"/>
+          <include name="handleTestMethodName"/>
           <include name="flushExtent"/>
-          <include name="createPOMObject"/>
           <include name="launchBrowser"/>
+          <include name="addHomeImprovementsToWishList"/>
         </methods>
-      </class> <!-- testcases.AddBestSellerItemToWishList -->
+      </class> <!-- testcases.AddHomeImprovementItemsToWishList -->
     </classes>
-  </test> <!-- addToWishlist(failed) -->
+  </test> <!-- addHomeImprovementToWishlist(failed) -->
 </suite> <!-- Failed suite [Parent_Suite] -->
