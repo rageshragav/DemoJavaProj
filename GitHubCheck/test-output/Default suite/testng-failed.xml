@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.AddSportsFitnessItemToWishList">
+      <class name="testcases.AddVehicleInGarage">
         <methods>
           <include name="handleTestMethodName"/>
-          <include name="BestSellerBook"/>
-          <include name="flushExtent"/>
           <include name="createPOMObject"/>
+          <include name="flushExtent"/>
+          <include name="AddNewVehicle"/>
           <include name="launchBrowser"/>
         </methods>
-      </class> <!-- testcases.AddSportsFitnessItemToWishList -->
+      </class> <!-- testcases.AddVehicleInGarage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
