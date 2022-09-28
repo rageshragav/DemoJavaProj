@@ -1,21 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+=======
+<testng-results ignored="0" total="11" passed="10" failed="1" skipped="0">
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2022-09-27T15:46:03 IST" name="Default suite" finished-at="2022-09-27T15:47:42 IST" duration-ms="99305">
+=======
+  <suite started-at="2022-09-23T17:23:18 IST" name="Parent_Suite" finished-at="2022-09-23T17:26:06 IST" duration-ms="167311">
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj
     <groups>
     </groups>
+<<<<<<< HEAD
     <test started-at="2022-09-27T15:46:03 IST" name="Default test" finished-at="2022-09-27T15:47:42 IST" duration-ms="99305">
       <class name="testcases.AddBabyProductToCartViaWishList">
         <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.AddBabyProductToCartViaWishList@185a6e9]" started-at="2022-09-27T15:46:03 IST" name="launchBrowser" finished-at="2022-09-27T15:46:23 IST" duration-ms="19766" status="PASS">
+=======
+    <test started-at="2022-09-23T17:23:18 IST" name="Login" finished-at="2022-09-23T17:23:29 IST" duration-ms="10305">
+      <class name="testcases.LoginValidCred">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.LoginValidCred@18ece7f4]" started-at="2022-09-23T17:23:18 IST" name="launchBrowser" finished-at="2022-09-23T17:23:23 IST" duration-ms="4547" status="PASS">
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="createPOMObject()[pri:0, instance:testcases.AddBabyProductToCartViaWishList@185a6e9]" started-at="2022-09-27T15:46:23 IST" name="createPOMObject" finished-at="2022-09-27T15:46:23 IST" duration-ms="148" status="PASS">
+=======
+        <test-method is-config="true" signature="createPOMObject()[pri:0, instance:testcases.LoginValidCred@18ece7f4]" started-at="2022-09-23T17:23:23 IST" name="createPOMObject" finished-at="2022-09-23T17:23:23 IST" duration-ms="70" status="PASS">
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPOMObject -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddBabyProductToCartViaWishList@185a6e9]" started-at="2022-09-27T15:46:23 IST" name="handleTestMethodName" finished-at="2022-09-27T15:46:23 IST" duration-ms="5" status="PASS">
+=======
+        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.LoginValidCred@18ece7f4]" started-at="2022-09-23T17:23:23 IST" name="handleTestMethodName" finished-at="2022-09-23T17:23:23 IST" duration-ms="3" status="PASS">
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj
           <params>
             <param index="0">
               <value>
@@ -26,11 +48,55 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- handleTestMethodName -->
+<<<<<<< HEAD
         <test-method signature="LoginPage()[pri:1, instance:testcases.AddBabyProductToCartViaWishList@185a6e9]" started-at="2022-09-27T15:46:23 IST" name="LoginPage" finished-at="2022-09-27T15:46:26 IST" duration-ms="2387" status="PASS">
+=======
+        <test-method signature="loginWithValidCredentails()[pri:0, instance:testcases.LoginValidCred@18ece7f4]" started-at="2022-09-23T17:23:23 IST" name="loginWithValidCredentails" finished-at="2022-09-23T17:23:27 IST" duration-ms="3676" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidCredentails -->
+        <test-method is-config="true" signature="flushExtent()[pri:0, instance:testcases.LoginValidCred@18ece7f4]" started-at="2022-09-23T17:23:27 IST" name="flushExtent" finished-at="2022-09-23T17:23:29 IST" duration-ms="1727" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushExtent -->
+      </class> <!-- testcases.LoginValidCred -->
+    </test> <!-- Login -->
+    <test started-at="2022-09-23T17:23:29 IST" name="viewOrder" finished-at="2022-09-23T17:23:43 IST" duration-ms="13901">
+      <class name="testcases.ViewOrders">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.ViewOrders@1890516e]" started-at="2022-09-23T17:23:29 IST" name="launchBrowser" finished-at="2022-09-23T17:23:32 IST" duration-ms="2974" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="createPOMObject()[pri:0, instance:testcases.ViewOrders@1890516e]" started-at="2022-09-23T17:23:32 IST" name="createPOMObject" finished-at="2022-09-23T17:23:32 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPOMObject -->
+        <test-method signature="LoginPage()[pri:1, instance:testcases.ViewOrders@1890516e]" started-at="2022-09-23T17:23:32 IST" name="LoginPage" finished-at="2022-09-23T17:23:34 IST" duration-ms="2080" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginPage -->
+        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.ViewOrders@1890516e]" started-at="2022-09-23T17:23:32 IST" name="handleTestMethodName" finished-at="2022-09-23T17:23:32 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.ViewOrders.LoginPage() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleTestMethodName -->
+        <test-method signature="ViewOrdersPage()[pri:2, instance:testcases.ViewOrders@1890516e]" started-at="2022-09-23T17:23:35 IST" name="ViewOrdersPage" finished-at="2022-09-23T17:23:41 IST" duration-ms="5821" status="PASS">
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj
+          <reporter-output>
+          </reporter-output>
+<<<<<<< HEAD
+        </test-method> <!-- LoginPage -->
         <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddBabyProductToCartViaWishList@185a6e9]" started-at="2022-09-27T15:46:26 IST" name="handleTestMethodName" finished-at="2022-09-27T15:46:26 IST" duration-ms="2" status="PASS">
+=======
+        </test-method> <!-- ViewOrdersPage -->
+        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.ViewOrders@1890516e]" started-at="2022-09-23T17:23:35 IST" name="handleTestMethodName" finished-at="2022-09-23T17:23:35 IST" duration-ms="0" status="PASS">
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj
           <params>
             <param index="0">
               <value>
@@ -41,15 +107,286 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- handleTestMethodName -->
+<<<<<<< HEAD
         <test-method signature="BabyProduct()[pri:2, instance:testcases.AddBabyProductToCartViaWishList@185a6e9]" started-at="2022-09-27T15:46:26 IST" name="BabyProduct" finished-at="2022-09-27T15:47:38 IST" duration-ms="72798" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BabyProduct -->
         <test-method is-config="true" signature="flushExtent()[pri:0, instance:testcases.AddBabyProductToCartViaWishList@185a6e9]" started-at="2022-09-27T15:47:38 IST" name="flushExtent" finished-at="2022-09-27T15:47:42 IST" duration-ms="4078" status="PASS">
+=======
+        <test-method is-config="true" signature="flushExtent()[pri:0, instance:testcases.ViewOrders@1890516e]" started-at="2022-09-23T17:23:41 IST" name="flushExtent" finished-at="2022-09-23T17:23:43 IST" duration-ms="1320" status="PASS">
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushExtent -->
+<<<<<<< HEAD
       </class> <!-- testcases.AddBabyProductToCartViaWishList -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
+=======
+      </class> <!-- testcases.ViewOrders -->
+    </test> <!-- viewOrder -->
+    <test started-at="2022-09-23T17:23:43 IST" name="addToCart" finished-at="2022-09-23T17:24:15 IST" duration-ms="31912">
+      <class name="testcases.AddItemToCart">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.AddItemToCart@189cbd7c]" started-at="2022-09-23T17:23:43 IST" name="launchBrowser" finished-at="2022-09-23T17:23:46 IST" duration-ms="2835" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="createPOMObject()[pri:0, instance:testcases.AddItemToCart@189cbd7c]" started-at="2022-09-23T17:23:46 IST" name="createPOMObject" finished-at="2022-09-23T17:23:46 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPOMObject -->
+        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddItemToCart@189cbd7c]" started-at="2022-09-23T17:23:46 IST" name="handleTestMethodName" finished-at="2022-09-23T17:23:46 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.AddItemToCart.loginToAmazon()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleTestMethodName -->
+        <test-method signature="loginToAmazon()[pri:1, instance:testcases.AddItemToCart@189cbd7c]" started-at="2022-09-23T17:23:46 IST" name="loginToAmazon" finished-at="2022-09-23T17:23:48 IST" duration-ms="2179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToAmazon -->
+        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddItemToCart@189cbd7c]" started-at="2022-09-23T17:23:49 IST" name="handleTestMethodName" finished-at="2022-09-23T17:23:49 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.AddItemToCart.searchItemAndAddToCart() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleTestMethodName -->
+        <test-method signature="searchItemAndAddToCart()[pri:2, instance:testcases.AddItemToCart@189cbd7c]" started-at="2022-09-23T17:23:49 IST" name="searchItemAndAddToCart" finished-at="2022-09-23T17:24:13 IST" duration-ms="24358" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchItemAndAddToCart -->
+        <test-method is-config="true" signature="flushExtent()[pri:0, instance:testcases.AddItemToCart@189cbd7c]" started-at="2022-09-23T17:24:14 IST" name="flushExtent" finished-at="2022-09-23T17:24:15 IST" duration-ms="1044" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushExtent -->
+      </class> <!-- testcases.AddItemToCart -->
+    </test> <!-- addToCart -->
+    <test started-at="2022-09-23T17:24:15 IST" name="addToWishlist" finished-at="2022-09-23T17:24:37 IST" duration-ms="22689">
+      <class name="testcases.AddBestSellerItemToWishList">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.AddBestSellerItemToWishList@6aa8e115]" started-at="2022-09-23T17:24:15 IST" name="launchBrowser" finished-at="2022-09-23T17:24:18 IST" duration-ms="2920" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="createPOMObject()[pri:0, instance:testcases.AddBestSellerItemToWishList@6aa8e115]" started-at="2022-09-23T17:24:18 IST" name="createPOMObject" finished-at="2022-09-23T17:24:18 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPOMObject -->
+        <test-method signature="LoginPage()[pri:1, instance:testcases.AddBestSellerItemToWishList@6aa8e115]" started-at="2022-09-23T17:24:18 IST" name="LoginPage" finished-at="2022-09-23T17:24:20 IST" duration-ms="1949" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginPage -->
+        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddBestSellerItemToWishList@6aa8e115]" started-at="2022-09-23T17:24:18 IST" name="handleTestMethodName" finished-at="2022-09-23T17:24:18 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.AddBestSellerItemToWishList.LoginPage() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleTestMethodName -->
+        <test-method signature="BestSellerBook()[pri:2, instance:testcases.AddBestSellerItemToWishList@6aa8e115]" started-at="2022-09-23T17:24:21 IST" name="BestSellerBook" finished-at="2022-09-23T17:24:36 IST" duration-ms="14978" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BestSellerBook -->
+        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddBestSellerItemToWishList@6aa8e115]" started-at="2022-09-23T17:24:21 IST" name="handleTestMethodName" finished-at="2022-09-23T17:24:21 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.AddBestSellerItemToWishList.BestSellerBook() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleTestMethodName -->
+        <test-method is-config="true" signature="flushExtent()[pri:0, instance:testcases.AddBestSellerItemToWishList@6aa8e115]" started-at="2022-09-23T17:24:36 IST" name="flushExtent" finished-at="2022-09-23T17:24:37 IST" duration-ms="1143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushExtent -->
+      </class> <!-- testcases.AddBestSellerItemToWishList -->
+    </test> <!-- addToWishlist -->
+    <test started-at="2022-09-23T17:24:38 IST" name="addHomeImprovementToWishlist" finished-at="2022-09-23T17:25:19 IST" duration-ms="41398">
+      <class name="testcases.AddHomeImprovementItemsToWishList">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.AddHomeImprovementItemsToWishList@560348e6]" started-at="2022-09-23T17:24:38 IST" name="launchBrowser" finished-at="2022-09-23T17:24:42 IST" duration-ms="4164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="createPOMObject()[pri:0, instance:testcases.AddHomeImprovementItemsToWishList@560348e6]" started-at="2022-09-23T17:24:42 IST" name="createPOMObject" finished-at="2022-09-23T17:24:42 IST" duration-ms="30" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPOMObject -->
+        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddHomeImprovementItemsToWishList@560348e6]" started-at="2022-09-23T17:24:42 IST" name="handleTestMethodName" finished-at="2022-09-23T17:24:42 IST" duration-ms="15" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.AddHomeImprovementItemsToWishList.LoginPage() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleTestMethodName -->
+        <test-method signature="LoginPage()[pri:1, instance:testcases.AddHomeImprovementItemsToWishList@560348e6]" started-at="2022-09-23T17:24:42 IST" name="LoginPage" finished-at="2022-09-23T17:24:47 IST" duration-ms="4928" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginPage -->
+        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddHomeImprovementItemsToWishList@560348e6]" started-at="2022-09-23T17:24:48 IST" name="handleTestMethodName" finished-at="2022-09-23T17:24:48 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.AddHomeImprovementItemsToWishList.addHomeImprovementsToWishList() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleTestMethodName -->
+        <test-method signature="addHomeImprovementsToWishList()[pri:2, instance:testcases.AddHomeImprovementItemsToWishList@560348e6]" started-at="2022-09-23T17:24:48 IST" name="addHomeImprovementsToWishList" finished-at="2022-09-23T17:25:17 IST" duration-ms="29277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addHomeImprovementsToWishList -->
+        <test-method is-config="true" signature="flushExtent()[pri:0, instance:testcases.AddHomeImprovementItemsToWishList@560348e6]" started-at="2022-09-23T17:25:18 IST" name="flushExtent" finished-at="2022-09-23T17:25:19 IST" duration-ms="1314" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushExtent -->
+      </class> <!-- testcases.AddHomeImprovementItemsToWishList -->
+    </test> <!-- addHomeImprovementToWishlist -->
+    <test started-at="2022-09-23T17:25:19 IST" name="addSportsFitnessToWishList" finished-at="2022-09-23T17:26:06 IST" duration-ms="46531">
+      <class name="testcases.AddSportsFitnessItemToWishList">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.AddSportsFitnessItemToWishList@4d6025c5]" started-at="2022-09-23T17:25:19 IST" name="launchBrowser" finished-at="2022-09-23T17:25:22 IST" duration-ms="2835" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="createPOMObject()[pri:0, instance:testcases.AddSportsFitnessItemToWishList@4d6025c5]" started-at="2022-09-23T17:25:22 IST" name="createPOMObject" finished-at="2022-09-23T17:25:22 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPOMObject -->
+        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddSportsFitnessItemToWishList@4d6025c5]" started-at="2022-09-23T17:25:22 IST" name="handleTestMethodName" finished-at="2022-09-23T17:25:22 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.AddSportsFitnessItemToWishList.LoginPage() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleTestMethodName -->
+        <test-method signature="LoginPage()[pri:1, instance:testcases.AddSportsFitnessItemToWishList@4d6025c5]" started-at="2022-09-23T17:25:22 IST" name="LoginPage" finished-at="2022-09-23T17:25:24 IST" duration-ms="1662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginPage -->
+        <test-method signature="BestSellerBook()[pri:2, instance:testcases.AddSportsFitnessItemToWishList@4d6025c5]" started-at="2022-09-23T17:25:25 IST" name="BestSellerBook" finished-at="2022-09-23T17:26:04 IST" duration-ms="39581" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[3]/div/div/div/div/div/div/div[2]/div[1]/h2/a/span' (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[3]/div/div/div/div/div/div/div[2]/div[1]/h2/a/span' (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at pages.SportsFitnessAndOutdoorPage.addSportsItemToWishList(SportsFitnessAndOutdoorPage.java:85)
+at testcases.AddSportsFitnessItemToWishList.BestSellerBook(AddSportsFitnessItemToWishList.java:38)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[3]/div/div/div/div/div/div/div[2]/div[1]/h2/a/span"}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-RDR3QR6H', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d0e3aeb4ace2897d81fa112ef38887bf, findElement {using=xpath, value=//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]/div[3]/div/div/div/div/div/div/div[2]/div[1]/h2/a/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\rages\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:54013}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54013/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d0e3aeb4ace2897d81fa112ef38887bf
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at com.sun.proxy.$Proxy19.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:660)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+... 30 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BestSellerBook -->
+        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddSportsFitnessItemToWishList@4d6025c5]" started-at="2022-09-23T17:25:25 IST" name="handleTestMethodName" finished-at="2022-09-23T17:25:25 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.AddSportsFitnessItemToWishList.BestSellerBook() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleTestMethodName -->
+        <test-method is-config="true" signature="flushExtent()[pri:0, instance:testcases.AddSportsFitnessItemToWishList@4d6025c5]" started-at="2022-09-23T17:26:04 IST" name="flushExtent" finished-at="2022-09-23T17:26:06 IST" duration-ms="1070" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushExtent -->
+      </class> <!-- testcases.AddSportsFitnessItemToWishList -->
+    </test> <!-- addSportsFitnessToWishList -->
+  </suite> <!-- Parent_Suite -->
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj
 </testng-results>
