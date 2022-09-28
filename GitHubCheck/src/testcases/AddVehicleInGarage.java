@@ -4,14 +4,11 @@
 package testcases;
 
 import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import base.BaseClass;
 import pages.LoginPage;
-import pages.SportsFitnessAndOutdoorPage;
 import pages.VehicleGaragePage;
 
 /**

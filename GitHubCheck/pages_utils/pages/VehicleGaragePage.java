@@ -5,20 +5,14 @@ package pages;
 
 import java.time.Duration;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-import io.reactivex.rxjava3.functions.Action;
+import utils.Log;
 
 /**
  * @author ragesh
@@ -80,33 +74,70 @@ public class VehicleGaragePage {
 	
 	
 	public void addFirstVehicle() {
+		try {
 		addYourVehicleButton.click();
+		Log.info("Clicking on add your vehicle button",className);}
+		catch (Exception e) {
+			// TODO: handle exception
+			Log.error("Error while Clicking on add your vehicle button " +e,className);
+		}
 	}
 
 	public void selectVehicleType() {
+		try {
 		selectValueFromDropDown(vehicleTypeSelector, carType);
+		Log.info("Selecting vehicle type from the dropdown",className);}
+		catch (Exception e) {
+			// TODO: handle exception
+			Log.error("Error while Selecting vehicle type from the dropdown "+e,className);
+		}
 	}
 
 	public void selectVehicleBrand() {
 		selectValueFromDropDown(vehicleBrand, carBrand);
+		Log.info("Selecting vehicle brand from the dropdown",className);
 	}
 
 	public void selectVehicleModel() {
+		try {
 		selectValueFromDropDown(vehicleModel, carModel);
+		Log.info("Selecting vehicle model from the dropdown",className);}
+		catch (Exception e) {
+			// TODO: handle exception
+			Log.error("Error while Selecting vehicle model from the dropdown "+e,className);
+		}
 	}
 
 	public void selectVehicleVariant() {
+		try {
 		selectValueFromDropDown(vehicleVariant, carVariant);
+		Log.info("Selecting vehicle type from the dropdown",className);}
+		catch (Exception e) {
+			// TODO: handle exception
+			Log.error("Error while Selecting vehicle type from the dropdown "+e,className);
+		}
 	}
 
 	public void saveNewVehicle() {
+		try {
 		saveButton.click();
+		Log.info("Clicking on save button after selections in dropdown",className);}
+		catch (Exception e) {
+			// TODO: handle exception
+			Log.error("Error while Clicking on save button after selections in dropdown" +e,className);
+		}
 	}
 	public void removeVehicle() throws InterruptedException {
+		try {
 		removeVehicle.click();
+		Log.info("Clicking on remove vehicle menu option",className);
 		
-		Thread.sleep(1000);
 		deleteConfirmationYes.click();
+		Log.info("Clicking on YES in remove confirmation popup window",className);}
+		catch (Exception e) {
+			// TODO: handle exception
+			Log.error("Error while trying to remove the vehicle "+e,className);
+		}
 	}
 	
 	public Boolean getMainPageTitle() {
@@ -135,8 +166,14 @@ public class VehicleGaragePage {
 	}
 
 	public static void selectValueFromDropDown(WebElement element, String value) {
-		Select select = new Select(element);
-		select.selectByVisibleText(value);
+		try {
+			Select select = new Select(element);
+			select.selectByVisibleText(value);
+		} catch (Exception e) {
+			// TODO: handle exception
+			Log.error("Error while selecting values from dropdown "+e, VehicleGaragePage.class.getName());
+		}
+		
 	}
 
 }
