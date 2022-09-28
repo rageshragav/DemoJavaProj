@@ -1,6 +1,6 @@
 package testcases;
-import java.io.IOException;
 
+import java.io.IOException;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -8,20 +8,19 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 
 import base.BaseClass;
+import pages.BabyProductPage;
 import pages.BestSellerItemPage;
 import pages.LoginPage;
 import utils.Utility;
 
-public class AddBestSellerItemToWishList extends BaseClass {
-	public BestSellerItemPage bestSellerItemPage;
+public class AddBabyProductToCartViaWishList extends BaseClass {
+	public BabyProductPage babyProductPage;
 	public LoginPage loginPage;
 
-
-
-@BeforeClass
+	@BeforeClass
 	public void createPOMObject() {
 
-	bestSellerItemPage = new BestSellerItemPage(driver);
+		babyProductPage = new BabyProductPage(driver);
 		loginPage = new pages.LoginPage(driver);
 		
 	}
@@ -34,15 +33,15 @@ public class AddBestSellerItemToWishList extends BaseClass {
 	}
 
 	@Test(priority = 2)
-	public void BestSellerBook()
+	public void BabyProduct()
 			throws InterruptedException {
-		extentTest = extent.createTest("Adding best Seller item to wishlist  ");
-		bestSellerItemPage.addBestSellerBookToWishList();
-		if (bestSellerItemPage.isWishListWithwarOfLankaAdded()) {
-			extentTest.log(Status.PASS, "Item added to wishlist successfully",Utility.captureScreenShot(driver));
+		extentTest = extent.createTest("Adding Baby Product to cart Via wishlist  ");
+		babyProductPage.addBabyProductToWishList();
+		if (babyProductPage.isWishListWithwarOfLankaAdded()) {
+			extentTest.log(Status.PASS, "Product added to Cart successfully",Utility.captureScreenShot(driver));
 			
 		} else {
-			extentTest.log(Status.FAIL, "Item not added to wishlist successfully",Utility.captureScreenShot(driver));
+			extentTest.log(Status.FAIL, "Product not added to Cart successfully",Utility.captureScreenShot(driver));
 		}
 		
 		
@@ -50,3 +49,5 @@ public class AddBestSellerItemToWishList extends BaseClass {
 	
 		   
 }
+
+

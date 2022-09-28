@@ -22,8 +22,8 @@ public class HomePage {
 	@FindBy(xpath = "//span[contains(text(),'Apple iPhone 12 (128GB) - Green')]")
 	private WebElement searchResult;
 
-	@FindBy(xpath = "//a[text()='New Account']")
-	private WebElement newAccount;
+	@FindBy(xpath = "//span[text()='Account & Lists']")
+	private WebElement accountAndList;
 
 	@FindBy(xpath = "//a[text()='Edit Account']")
 	private WebElement editAccount;
@@ -37,9 +37,9 @@ public class HomePage {
 	@FindBy(xpath = "//a[text()='Customised Statement']")
 	private WebElement customizeStatement;
 
-	@FindBy(xpath = "//a[text()='Log out']")
-	private WebElement logOut;
-
+	@FindBy (xpath = "//span[contains(text(),'Sign Out')]")
+	private WebElement logout;
+	
 	private WebDriver driver;
 	private WebDriverWait wait;
 	private Actions actions;
@@ -80,11 +80,6 @@ public class HomePage {
 		}
 	}
 
-	public void opennewAccountPage() {
-		wait.until(ExpectedConditions.visibilityOf(newAccount));
-		actions.moveToElement(newAccount).build().perform();
-	}
-
 	public void openeditAccountPage() {
 		wait.until(ExpectedConditions.visibilityOf(editAccount));
 		actions.moveToElement(editAccount).build().perform();
@@ -107,8 +102,9 @@ public class HomePage {
 	}
 
 	public void clickOnlogOutTab() {
+		accountAndList.click();
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(logOut));
-		logOut.click();
+		wait.until(ExpectedConditions.elementToBeClickable(logout));
+		logout.click();
 	}
 }

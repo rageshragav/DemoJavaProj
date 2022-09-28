@@ -50,7 +50,7 @@ public class Utility {
 
 	}
 
-	public static void getScreenshot(WebDriver driver, int screenshotname_testid) throws IOException {
+	public static void getScreenshot(WebDriver driver, int testID) throws IOException {
 		// Screenshot code
 
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -58,7 +58,7 @@ public class Utility {
 		Date date = new Date();
 		String stamp = formatter.format(date);
 		// File dest = new File("E:\\selenium\\New folder\\test-"+testID+stamp+".jpg");
-		File dest = new File("./Screenshots/" + screenshotname_testid + ".png");
+		File dest = new File("\selenium\\\\New folder\\\\test-\"+testID+stamp+\".jpg");
 
 		FileHandler.copy(src, dest);
 
