@@ -1,37 +1,17 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.AddBabyProductToCartViaWishList">
+      <class name="testcases.AddMultipleVehicleInGarage">
         <methods>
           <include name="handleTestMethodName"/>
-          <include name="BabyProduct"/>
-          <include name="createPOMObject"/>
           <include name="flushExtent"/>
+          <include name="AddNewVehicle" invocation-numbers="1"/>
           <include name="launchBrowser"/>
+          <include name="createPOMObject"/>
         </methods>
-      </class> <!-- testcases.AddBabyProductToCartViaWishList -->
+      </class> <!-- testcases.AddMultipleVehicleInGarage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
-    <classes>
-      <class name="testcases.AddVehicleInGarage">
-        <methods>
-          <include name="handleTestMethodName"/>
-          <include name="createPOMObject"/>
-          <include name="flushExtent"/>
-          <include name="AddNewVehicle"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- testcases.AddVehicleInGarage -->
-    </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
->>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj

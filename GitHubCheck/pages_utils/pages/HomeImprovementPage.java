@@ -38,9 +38,13 @@ public class HomeImprovementPage {
 
 	@FindBy(xpath = "//body/div[@id='a-page']//div[2]//li[2]//span[1]//following::a//span[1][text()='Cleaning Supplies']")
 	private WebElement cleaningSuppliesDepartment;
-
-	@FindBy(xpath = "//ul//li//span//div//following::span//div//span[text()='Brooms']")
+/*
+	@FindBy(xpath = "//ul//li//span//div//following::span//div//span[text()='Brooms'] || //body/div[@id='a-page']//div[2]//li[2]//span[1]//following::a//span[1][text()='Brooms']")
 	private WebElement broomsMenuItem;
+	*/
+	@FindBy(xpath = "//body/div[@id='a-page']//div[2]//li[2]//span[1]//following::a//span[1][text()='Brooms']")
+	private WebElement broomsMenuItem;
+
 
 	@FindBy(xpath = "//div//span[text()='Brand']//following::ul//i//following::span[text()='Scotch-Brite']")
 	private WebElement brandScotchBrite;

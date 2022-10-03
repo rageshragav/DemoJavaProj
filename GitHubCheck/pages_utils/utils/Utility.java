@@ -19,6 +19,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -75,6 +76,14 @@ public class Utility {
 		js.executeScript("window.scrollBy(0," + pixel + ")");
 
 	}
+	
+	public static void javaScriptExecuterClick(WebDriver driver, WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", element);
+
+	}
+
+
 
 	public static void switchToNewWindow(WebDriver driver) {
 		mwh = driver.getWindowHandle();
