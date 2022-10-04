@@ -1,114 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-03T11:47:38 IST" name="Default suite" finished-at="2022-10-03T11:48:11 IST" duration-ms="32323">
+  <suite started-at="2022-10-04T15:38:15 IST" name="Default suite" finished-at="2022-10-04T15:40:44 IST" duration-ms="148738">
     <groups>
     </groups>
-    <test started-at="2022-10-03T11:47:38 IST" name="Default test" finished-at="2022-10-03T11:48:11 IST" duration-ms="32323">
-      <class name="testcases.AddMultipleVehicleInGarage">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.AddMultipleVehicleInGarage@662ac478]" started-at="2022-10-03T11:47:38 IST" name="launchBrowser" finished-at="2022-10-03T11:47:47 IST" duration-ms="8518" status="PASS">
+    <test started-at="2022-10-04T15:38:15 IST" name="Default test" finished-at="2022-10-04T15:40:44 IST" duration-ms="148738">
+      <class name="testcases.AddSmatphoneInCartBasedOnSpecifications">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.AddSmatphoneInCartBasedOnSpecifications@185a6e9]" started-at="2022-10-04T15:38:15 IST" name="launchBrowser" finished-at="2022-10-04T15:38:57 IST" duration-ms="41815" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="createPOMObject()[pri:0, instance:testcases.AddMultipleVehicleInGarage@662ac478]" started-at="2022-10-03T11:47:47 IST" name="createPOMObject" finished-at="2022-10-03T11:47:47 IST" duration-ms="80" status="PASS">
+        <test-method is-config="true" signature="createPOMObject()[pri:0, instance:testcases.AddSmatphoneInCartBasedOnSpecifications@185a6e9]" started-at="2022-10-04T15:38:57 IST" name="createPOMObject" finished-at="2022-10-04T15:38:58 IST" duration-ms="440" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPOMObject -->
-        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddMultipleVehicleInGarage@662ac478]" started-at="2022-10-03T11:47:47 IST" name="handleTestMethodName" finished-at="2022-10-03T11:47:47 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddSmatphoneInCartBasedOnSpecifications@185a6e9]" started-at="2022-10-04T15:38:58 IST" name="handleTestMethodName" finished-at="2022-10-04T15:38:58 IST" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testcases.AddMultipleVehicleInGarage.LoginPage() throws java.io.IOException,java.lang.InterruptedException]]>
+                <![CDATA[public void testcases.AddSmatphoneInCartBasedOnSpecifications.LoginPage() throws java.io.IOException,java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- handleTestMethodName -->
-        <test-method signature="LoginPage()[pri:1, instance:testcases.AddMultipleVehicleInGarage@662ac478]" started-at="2022-10-03T11:47:47 IST" name="LoginPage" finished-at="2022-10-03T11:47:49 IST" duration-ms="1576" status="PASS">
+        <test-method signature="LoginPage()[pri:1, instance:testcases.AddSmatphoneInCartBasedOnSpecifications@185a6e9]" started-at="2022-10-04T15:38:58 IST" name="LoginPage" finished-at="2022-10-04T15:39:01 IST" duration-ms="3210" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginPage -->
-        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddMultipleVehicleInGarage@662ac478]" started-at="2022-10-03T11:47:50 IST" name="handleTestMethodName" finished-at="2022-10-03T11:47:50 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddSmatphoneInCartBasedOnSpecifications@185a6e9]" started-at="2022-10-04T15:39:01 IST" name="handleTestMethodName" finished-at="2022-10-04T15:39:01 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testcases.AddMultipleVehicleInGarage.AddNewVehicle(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,java.lang.InterruptedException]]>
+                <![CDATA[public void testcases.AddSmatphoneInCartBasedOnSpecifications.SmartPhoneProduct() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- handleTestMethodName -->
-        <test-method signature="AddNewVehicle(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testcases.AddMultipleVehicleInGarage@662ac478]" started-at="2022-10-03T11:47:50 IST" name="AddNewVehicle" data-provider="vehicledata" finished-at="2022-10-03T11:48:01 IST" duration-ms="10661" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Car]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Hyundai]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[EON]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Sportz]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="SmartPhoneProduct()[pri:2, instance:testcases.AddSmatphoneInCartBasedOnSpecifications@185a6e9]" started-at="2022-10-04T15:39:01 IST" name="SmartPhoneProduct" finished-at="2022-10-04T15:40:33 IST" duration-ms="92151" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddNewVehicle -->
-        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddMultipleVehicleInGarage@662ac478]" started-at="2022-10-03T11:48:01 IST" name="handleTestMethodName" finished-at="2022-10-03T11:48:01 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testcases.AddMultipleVehicleInGarage.AddNewVehicle(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- handleTestMethodName -->
-        <test-method signature="AddNewVehicle(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:testcases.AddMultipleVehicleInGarage@662ac478]" started-at="2022-10-03T11:48:01 IST" name="AddNewVehicle" data-provider="vehicledata" finished-at="2022-10-03T11:48:09 IST" duration-ms="8283" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Car]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Hyundai]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Getz]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[GLE]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddNewVehicle -->
-        <test-method is-config="true" signature="flushExtent()[pri:0, instance:testcases.AddMultipleVehicleInGarage@662ac478]" started-at="2022-10-03T11:48:09 IST" name="flushExtent" finished-at="2022-10-03T11:48:11 IST" duration-ms="1504" status="PASS">
+        </test-method> <!-- SmartPhoneProduct -->
+        <test-method is-config="true" signature="flushExtent()[pri:0, instance:testcases.AddSmatphoneInCartBasedOnSpecifications@185a6e9]" started-at="2022-10-04T15:40:33 IST" name="flushExtent" finished-at="2022-10-04T15:40:44 IST" duration-ms="10770" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushExtent -->
-      </class> <!-- testcases.AddMultipleVehicleInGarage -->
+      </class> <!-- testcases.AddSmatphoneInCartBasedOnSpecifications -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

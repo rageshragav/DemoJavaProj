@@ -5,6 +5,7 @@
     <classes>
       <class name="testcases.AddHomeImprovementItemsToWishList">
         <methods>
+          <include name="handleTestMethodName"/>
           <include name="createPOMObject"/>
           <include name="flushExtent"/>
           <include name="launchBrowser"/>
