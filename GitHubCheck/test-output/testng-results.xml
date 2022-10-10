@@ -1,39 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="11" passed="9" failed="2" skipped="0">
+=======
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj.git
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2022-10-07T14:25:35 IST" name="Parent_Suite" finished-at="2022-10-07T14:30:02 IST" duration-ms="267382">
+=======
+  <suite started-at="2022-10-04T15:38:15 IST" name="Default suite" finished-at="2022-10-04T15:40:44 IST" duration-ms="148738">
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test started-at="2022-10-07T14:25:35 IST" name="Login" finished-at="2022-10-07T14:25:53 IST" duration-ms="17671">
       <class name="testcases.LoginValidCred">
         <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.LoginValidCred@18ece7f4]" started-at="2022-10-07T14:25:35 IST" name="launchBrowser" finished-at="2022-10-07T14:25:48 IST" duration-ms="13357" status="PASS">
+=======
+    <test started-at="2022-10-04T15:38:15 IST" name="Default test" finished-at="2022-10-04T15:40:44 IST" duration-ms="148738">
+      <class name="testcases.AddSmatphoneInCartBasedOnSpecifications">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.AddSmatphoneInCartBasedOnSpecifications@185a6e9]" started-at="2022-10-04T15:38:15 IST" name="launchBrowser" finished-at="2022-10-04T15:38:57 IST" duration-ms="41815" status="PASS">
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="createPOMObject()[pri:0, instance:testcases.LoginValidCred@18ece7f4]" started-at="2022-10-07T14:25:48 IST" name="createPOMObject" finished-at="2022-10-07T14:25:49 IST" duration-ms="34" status="PASS">
+=======
+        <test-method is-config="true" signature="createPOMObject()[pri:0, instance:testcases.AddSmatphoneInCartBasedOnSpecifications@185a6e9]" started-at="2022-10-04T15:38:57 IST" name="createPOMObject" finished-at="2022-10-04T15:38:58 IST" duration-ms="440" status="PASS">
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPOMObject -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.LoginValidCred@18ece7f4]" started-at="2022-10-07T14:25:49 IST" name="handleTestMethodName" finished-at="2022-10-07T14:25:49 IST" duration-ms="2" status="PASS">
+=======
+        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddSmatphoneInCartBasedOnSpecifications@185a6e9]" started-at="2022-10-04T15:38:58 IST" name="handleTestMethodName" finished-at="2022-10-04T15:38:58 IST" duration-ms="4" status="PASS">
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj.git
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
                 <![CDATA[public void testcases.LoginValidCred.loginWithValidCredentails()]]>
+=======
+                <![CDATA[public void testcases.AddSmatphoneInCartBasedOnSpecifications.LoginPage() throws java.io.IOException,java.lang.InterruptedException]]>
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj.git
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- handleTestMethodName -->
+<<<<<<< HEAD
         <test-method signature="loginWithValidCredentails()[pri:0, instance:testcases.LoginValidCred@18ece7f4]" started-at="2022-10-07T14:25:49 IST" name="loginWithValidCredentails" finished-at="2022-10-07T14:25:51 IST" duration-ms="2919" status="PASS">
+=======
+        <test-method signature="LoginPage()[pri:1, instance:testcases.AddSmatphoneInCartBasedOnSpecifications@185a6e9]" started-at="2022-10-04T15:38:58 IST" name="LoginPage" finished-at="2022-10-04T15:39:01 IST" duration-ms="3210" status="PASS">
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj.git
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- loginWithValidCredentails -->
         <test-method is-config="true" signature="flushExtent()[pri:0, instance:testcases.LoginValidCred@18ece7f4]" started-at="2022-10-07T14:25:52 IST" name="flushExtent" finished-at="2022-10-07T14:25:53 IST" duration-ms="1134" status="PASS">
+=======
+        </test-method> <!-- LoginPage -->
+        <test-method is-config="true" signature="handleTestMethodName(java.lang.reflect.Method)[pri:0, instance:testcases.AddSmatphoneInCartBasedOnSpecifications@185a6e9]" started-at="2022-10-04T15:39:01 IST" name="handleTestMethodName" finished-at="2022-10-04T15:39:01 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.AddSmatphoneInCartBasedOnSpecifications.SmartPhoneProduct() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleTestMethodName -->
+        <test-method signature="SmartPhoneProduct()[pri:2, instance:testcases.AddSmatphoneInCartBasedOnSpecifications@185a6e9]" started-at="2022-10-04T15:39:01 IST" name="SmartPhoneProduct" finished-at="2022-10-04T15:40:33 IST" duration-ms="92151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SmartPhoneProduct -->
+        <test-method is-config="true" signature="flushExtent()[pri:0, instance:testcases.AddSmatphoneInCartBasedOnSpecifications@185a6e9]" started-at="2022-10-04T15:40:33 IST" name="flushExtent" finished-at="2022-10-04T15:40:44 IST" duration-ms="10770" status="PASS">
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushExtent -->
+<<<<<<< HEAD
       </class> <!-- testcases.LoginValidCred -->
     </test> <!-- Login -->
     <test started-at="2022-10-07T14:25:53 IST" name="viewOrder" finished-at="2022-10-07T14:26:09 IST" duration-ms="16080">
@@ -421,4 +472,9 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
       </class> <!-- testcases.AddSportsFitnessItemToWishList -->
     </test> <!-- addSportsFitnessToWishList -->
   </suite> <!-- Parent_Suite -->
+=======
+      </class> <!-- testcases.AddSmatphoneInCartBasedOnSpecifications -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+>>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj.git
 </testng-results>
