@@ -4,42 +4,30 @@
   <listeners>
     <listener class-name="utils.Listners"/>
   </listeners>
-<<<<<<< HEAD
-  <test thread-count="5" name="addHomeImprovementToWishlist(failed)">
-=======
-  <test thread-count="5" name="addSportsFitnessToWishList(failed)">
->>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj
+  <test thread-count="5" name="addToWishlist(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="testcases.AddHomeImprovementItemsToWishList">
-=======
-      <class name="testcases.AddSportsFitnessItemToWishList">
->>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj
+      <class name="testcases.AddBestSellerItemToWishList">
         <methods>
-<<<<<<< HEAD
-          <include name="createPOMObject"/>
-          <include name="handleTestMethodName"/>
-=======
           <include name="handleTestMethodName"/>
           <include name="BestSellerBook"/>
->>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj
+          <include name="flushExtent"/>
+          <include name="createPOMObject"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- testcases.AddBestSellerItemToWishList -->
+    </classes>
+  </test> <!-- addToWishlist(failed) -->
+  <test thread-count="5" name="addSportsFitnessToWishList(failed)">
+    <classes>
+      <class name="testcases.AddSportsFitnessItemToWishList">
+        <methods>
+          <include name="handleTestMethodName"/>
+          <include name="BestSellerBook"/>
           <include name="flushExtent"/>
           <include name="launchBrowser"/>
-<<<<<<< HEAD
-          <include name="addHomeImprovementsToWishList"/>
-=======
           <include name="createPOMObject"/>
->>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj
         </methods>
-<<<<<<< HEAD
-      </class> <!-- testcases.AddHomeImprovementItemsToWishList -->
-=======
       </class> <!-- testcases.AddSportsFitnessItemToWishList -->
->>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj
     </classes>
-<<<<<<< HEAD
-  </test> <!-- addHomeImprovementToWishlist(failed) -->
-=======
   </test> <!-- addSportsFitnessToWishList(failed) -->
->>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj
 </suite> <!-- Failed suite [Parent_Suite] -->
