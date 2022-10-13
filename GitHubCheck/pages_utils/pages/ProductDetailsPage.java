@@ -38,7 +38,7 @@ public class ProductDetailsPage {
 	private WebElement searchProductTitle;
 	
 	@FindBy (xpath = "//input[@id='add-to-cart-button']")
-	private WebElement addToCartButton;
+	public WebElement addToCartButton;
 	
 	@FindBy (xpath = "//span[@class='a-button-inner']//following::span[text()='Proceed to checkout (1 item)']")
 	private WebElement proceedToCheckout;

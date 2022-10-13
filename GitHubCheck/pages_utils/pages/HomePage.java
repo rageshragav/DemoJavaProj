@@ -40,6 +40,18 @@ public class HomePage {
 	@FindBy (xpath = "//span[contains(text(),'Sign Out')]")
 	private WebElement logout;
 	
+
+	@FindBy (xpath = "//a[@id='nav-hamburger-menu']")
+	private WebElement hamburgerMenu;
+	
+	@FindBy (xpath = "//a//div[contains(text(),'Mobiles, Computers')]")
+	private WebElement computerMenuItem;
+	
+	@FindBy (xpath = "//a[contains(text(),'Laptops')]")
+	private WebElement laptopMenuItem;
+	
+	
+	
 	private WebDriver driver;
 	private WebDriverWait wait;
 	private Actions actions;
@@ -51,6 +63,17 @@ public class HomePage {
 		actions = new Actions(driver);
 	}
 
+	public void clickHamburgerMenuItem() {
+		wait.until(ExpectedConditions.visibilityOf(hamburgerMenu)).click();
+	}
+	
+	public void clickComputerMenuItem() {
+		wait.until(ExpectedConditions.visibilityOf(computerMenuItem)).click();
+	}
+	
+	public void clickLaptopMenuItem() {
+		wait.until(ExpectedConditions.visibilityOf(laptopMenuItem)).click();
+	}
 	public void searchItem(String itemToSearch) {
 		wait.until(ExpectedConditions.visibilityOf(searchBar));
 		searchBar.clear();
