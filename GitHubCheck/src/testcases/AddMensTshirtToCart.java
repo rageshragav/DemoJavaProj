@@ -8,19 +8,19 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 
 import base.BaseClass;
-import pages.SmartPhonePage;
+import pages.LoginPage;
+import pages.MensTshirtPage;
 import utils.Log;
 import utils.Utility;
-import pages.LoginPage;
 
-public class AddSmatphoneInCartBasedOnSpecifications extends BaseClass {
-	public SmartPhonePage smartPhonePage;
+public class AddMensTshirtToCart extends BaseClass{
+	public MensTshirtPage mensTshirtPage;
 	public LoginPage loginPage;
 
 	@BeforeClass
 	public void createPOMObject() {
 
-		smartPhonePage = new SmartPhonePage(driver);
+		mensTshirtPage = new MensTshirtPage(driver);
 		loginPage = new pages.LoginPage(driver);
 		
 	}
@@ -32,22 +32,22 @@ public class AddSmatphoneInCartBasedOnSpecifications extends BaseClass {
 
 	}
 	@Test(priority = 2)
-	public void SmartPhoneProduct()
+	public void MensTshirtProduct()
 			throws InterruptedException {
-		extentTest = extent.createTest("Adding Smartphone product to cart Via wishlist  ");
-		smartPhonePage.addSmartPhoneToWishList();
-		if (smartPhonePage.isWishListWithSmartPhoneAdded()) {
+		extentTest = extent.createTest("Adding MensTshirt Product to cart Via wishlist  ");
+		mensTshirtPage.addMensTshirtToWishList();
+		if (mensTshirtPage.isWishListWithMensTshirtAdded()) {
 			extentTest.log(Status.PASS, "Product added to Cart successfully",Utility.captureScreenShot(driver));
 			
 		} 
 		else {
 			extentTest.log(Status.FAIL, "Product not added to Cart successfully",Utility.captureScreenShot(driver));
 		}
-		smartPhonePage.addToCartViaWishList();
-		smartPhonePage.proceedToCheckoutFromWishList();
-		smartPhonePage.deleteItemFromCart();
+		mensTshirtPage.addToCartViaWishList();
+		mensTshirtPage.proceedToCheckoutFromWishList();
+		mensTshirtPage.deleteItemFromCart();
 		
-		if (smartPhonePage.isItemDeleted()) {
+		if (mensTshirtPage.isItemDeleted()) {
 			extentTest.log(Status.PASS, "Item deleted from the cart successfully", Utility.captureScreenShot(driver));
 			Log.info("Item deleted from the cart successfully",className);
 		} else {
@@ -55,5 +55,5 @@ public class AddSmatphoneInCartBasedOnSpecifications extends BaseClass {
 					Utility.captureScreenShot(driver));
 			Log.error("Item not deleted from the cart successfully",className);
 		}
-	}	
+ }
 }
