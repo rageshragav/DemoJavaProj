@@ -1,46 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Parent_Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="utils.Listners"/>
-  </listeners>
-  <test thread-count="5" name="addToWishlist(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="testcases.AddBestSellerItemToWishList">
-=======
-      <class name="testcases.AddSmatphoneInCartBasedOnSpecifications">
->>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj.git
+      <class name="testcases.AddMensTshirtToCart">
         <methods>
-          <include name="BabyProduct"/>
+          <include name="MensTshirtProduct"/>
           <include name="handleTestMethodName"/>
-          <include name="BestSellerBook"/>
           <include name="flushExtent"/>
-<<<<<<< HEAD
           <include name="createPOMObject"/>
           <include name="launchBrowser"/>
         </methods>
-      </class> <!-- testcases.AddBestSellerItemToWishList -->
+      </class> <!-- testcases.AddMensTshirtToCart -->
     </classes>
-  </test> <!-- addToWishlist(failed) -->
-  <test thread-count="5" name="addSportsFitnessToWishList(failed)">
-    <classes>
-      <class name="testcases.AddSportsFitnessItemToWishList">
-        <methods>
-          <include name="handleTestMethodName"/>
-          <include name="BestSellerBook"/>
-          <include name="flushExtent"/>
-          <include name="launchBrowser"/>
-=======
->>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj.git
-          <include name="createPOMObject"/>
-          <include name="launchBrowser"/>
-        </methods>
-<<<<<<< HEAD
-      </class> <!-- testcases.AddSportsFitnessItemToWishList -->
-=======
-      </class> <!-- testcases.AddSmatphoneInCartBasedOnSpecifications -->
->>>>>>> branch 'master' of https://github.com/rageshragav/DemoJavaProj.git
-    </classes>
-  </test> <!-- addSportsFitnessToWishList(failed) -->
-</suite> <!-- Failed suite [Parent_Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
