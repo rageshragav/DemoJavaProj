@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.AddSmatphoneInCartBasedOnSpecifications">
+      <class name="testcases.AddMultipleCategItems">
         <methods>
-          <include name="BabyProduct"/>
           <include name="handleTestMethodName"/>
           <include name="flushExtent"/>
           <include name="createPOMObject"/>
+          <include name="addToyToCart"/>
           <include name="launchBrowser"/>
         </methods>
-      </class> <!-- testcases.AddSmatphoneInCartBasedOnSpecifications -->
+      </class> <!-- testcases.AddMultipleCategItems -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

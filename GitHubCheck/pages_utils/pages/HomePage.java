@@ -37,18 +37,43 @@ public class HomePage {
 	@FindBy(xpath = "//a[text()='Customised Statement']")
 	private WebElement customizeStatement;
 
-	@FindBy (xpath = "//span[contains(text(),'Sign Out')]")
+	@FindBy(xpath = "//span[contains(text(),'Sign Out')]")
 	private WebElement logout;
-	
 
-	@FindBy (xpath = "//a[@id='nav-hamburger-menu']")
+	@FindBy(xpath = "//a[@id='nav-hamburger-menu']")
 	private WebElement hamburgerMenu;
-	
-	@FindBy (xpath = "//a//div[contains(text(),'Mobiles, Computers')]")
+
+	@FindBy(xpath = "//a//div[contains(text(),'Mobiles, Computers')]")
 	private WebElement computerMenuItem;
-	
-	@FindBy (xpath = "//a[contains(text(),'Laptops')]")
+
+	@FindBy(xpath = "//a[contains(text(),'Laptops')]")
 	private WebElement laptopMenuItem;
+
+	@FindBy(xpath = "//a//div[contains(text(),'Echo & Alexa')]")
+	private WebElement echoMenu;
+
+	@FindBy(xpath = "//a[contains(text(),'All-new Echo Dot (4th Gen)')]")
+	private WebElement echoDot4thGen;
+
+	@FindBy(xpath = "//li//a//div[contains(text(),'Fire TV')]")
+	private WebElement fireTv;
+
+	@FindBy(xpath = "//a[contains(text(),'All-new Fire TV Stick (3rd Gen)')]")
+	private WebElement fireTvNewGen;
+
+	@FindBy(xpath = "//a//div[contains(text(),'see all')]")
+	private WebElement seeAllLink;
+
+	@FindBy(xpath = "//div[@id='hmenu-content']")
+	public WebElement menuContent;
+
+	@FindBy(xpath = "//div[contains(text(),\"Toys, Baby Products, Kids' Fashion\")]")
+	public WebElement toysMenu;
+
+	@FindBy(xpath = "//li//a[contains(text(),\"Toys & Games\")]")
+	public WebElement toysGamesMenu;
+
+	
 	
 	
 	
@@ -56,6 +81,7 @@ public class HomePage {
 	private WebDriverWait wait;
 	private Actions actions;
 	public String className = this.getClass().getSimpleName();
+
 	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
@@ -66,40 +92,67 @@ public class HomePage {
 	public void clickHamburgerMenuItem() {
 		wait.until(ExpectedConditions.visibilityOf(hamburgerMenu)).click();
 	}
-	
+
 	public void clickComputerMenuItem() {
 		wait.until(ExpectedConditions.visibilityOf(computerMenuItem)).click();
 	}
-	
+
 	public void clickLaptopMenuItem() {
 		wait.until(ExpectedConditions.visibilityOf(laptopMenuItem)).click();
+	}
+
+	public void clickEchoMenuItem() {
+		wait.until(ExpectedConditions.visibilityOf(echoMenu)).click();
+	}
+	
+	public void clickEchoDotItem() {
+		wait.until(ExpectedConditions.visibilityOf(echoDot4thGen)).click();
+	}
+
+	public void clickFireTvItem() {
+		wait.until(ExpectedConditions.visibilityOf(fireTv)).click();
+	}
+	
+	public void clickFireTvGen() {
+		wait.until(ExpectedConditions.visibilityOf(fireTvNewGen)).click();
+	}
+	
+	public void clickToysMenu() {
+		wait.until(ExpectedConditions.visibilityOf(toysMenu)).click();
+	}
+	
+	public void clickToysGamesMenu() {
+		wait.until(ExpectedConditions.visibilityOf(toysGamesMenu)).click();
+	}
+	public void seeAllMenu() {
+		wait.until(ExpectedConditions.visibilityOf(seeAllLink)).click();
 	}
 	public void searchItem(String itemToSearch) {
 		wait.until(ExpectedConditions.visibilityOf(searchBar));
 		searchBar.clear();
 		searchBar.sendKeys(itemToSearch);
-		Log.info("Searching for the item " + itemToSearch,className);
+		Log.info("Searching for the item " + itemToSearch, className);
 	}
 
 	public void clickOnSearchIcon() {
 		try {
-		wait.until(ExpectedConditions.visibilityOf(searchIcon));
-		searchIcon.click();
-		Log.info("Made a click on search icon",className);}
-		catch (Exception e) {
+			wait.until(ExpectedConditions.visibilityOf(searchIcon));
+			searchIcon.click();
+			Log.info("Made a click on search icon", className);
+		} catch (Exception e) {
 			// TODO: handle exception
-			Log.error("Error while clicking on the search icon",className);
+			Log.error("Error while clicking on the search icon", className);
 		}
 	}
 
 	public void clickOnSearchResult() {
 		try {
-		wait.until(ExpectedConditions.visibilityOf(searchResult));
-		searchResult.click();
-		Log.info("Clickig on the required item from the search result",className);}
-		catch (Exception e) {
+			wait.until(ExpectedConditions.visibilityOf(searchResult));
+			searchResult.click();
+			Log.info("Clickig on the required item from the search result", className);
+		} catch (Exception e) {
 			// TODO: handle exception
-			Log.error("Error while clicking on the search result " +e,className);
+			Log.error("Error while clicking on the search result " + e, className);
 		}
 	}
 

@@ -14,6 +14,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -76,6 +77,14 @@ public class Utility {
 		js.executeScript("window.scrollBy(0," + pixel + ")");
 
 	}
+	
+	public static void javaScriptExecuterScrollDownInMenu(WebDriver driver, int pixel,String path) {
+		WebElement element = driver.findElement(By.xpath(path));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0," + pixel + ")");
+
+	}
+
 	
 	public static void javaScriptExecuterClick(WebDriver driver, WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
