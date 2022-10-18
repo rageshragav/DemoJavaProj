@@ -97,7 +97,7 @@ Testclass(){
    {
 	   if(ITestResult.FAILURE == result.getStatus())
 	   {
-		   Utility.getScreenshot(driver, testID);
+		   Utility.getScreenshot(driver);
 	   }
 	    System.out.println("logout From Application");
 	    homePage.clickOnlogOutTab();
